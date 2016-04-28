@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 Thank you for purchasing the theme.
@@ -73,3 +74,6 @@ For image, video, font and Javascript plugin usage, please see the Credits secti
 
 #### 1.0.0 - 7th November 2014 ####
 * Initial release
+=======
+# riitiir-website
+>>>>>>> 32a12c6e213f6ce1bdabc08f4e8f9f0559d2287b
