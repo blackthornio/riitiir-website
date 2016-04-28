@@ -1,0 +1,240 @@
+@import "partials/_variables.scss";
+
+#style-switcher {
+    z-index: 9999;
+    position: fixed;
+    top: 100px;
+    width: 600px;
+    height: auto;
+    min-height: 200px;
+    border: 1px solid #f1f1f1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    background: white;
+    background: rgba(255,255,255,0.95);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+
+    h6 {
+        margin-top: 0;
+    }
+}
+
+.close-style-switcher {
+    left: -600px;
+}
+
+.open-style-switcher {
+    left: -1px;
+}
+
+#style-switcher .style-switcher-section {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#style-switcher .style-switcher-section-col3 {
+    width: 33.33%;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    float: left;
+}
+
+#style-switcher a.panel-button {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f1f1f1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 47px;
+    background: white;
+    cursor: pointer;
+}
+
+#style-switcher h3 {
+    margin: 0;
+}
+
+#style-switcher .style-switcher-section a.switcher, #style-switcher .style-switcher-section-col3 a.switcher {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#style-switcher .style-switcher-section,#style-switcher .style-switcher-section-col3 {
+    a.switcher:hover, a.switcher.active {
+        border: 3px solid black;
+    }
+}
+
+select#font_switcher,select#nav_switcher,select#hero_switcher {
+    zoom: 110%;
+}
+
+.solid-red-bg {
+    background-color: $solid-red;
+}
+
+.solid-orange-bg {
+    background-color: $solid-orange;
+}
+
+.solid-yellow-bg {
+    background-color: $solid-yellow;
+}
+
+.solid-green-bg {
+    background-color: $solid-green;
+}
+
+.solid-turquoise-bg {
+    background-color: $solid-turquoise;
+}
+
+.solid-aqua-bg {
+    background-color: $solid-aqua;
+}
+
+.solid-blue-bg {
+    background-color: $solid-blue;
+}
+
+.solid-purple-bg {
+    background-color: $solid-purple;
+}
+
+.solid-pink-bg {
+    background-color: $solid-pink;
+}
+
+.solid-gray-bg {
+    background-color: $solid-gray;
+}
+
+.pastel-red-bg {
+    background-color: $pastel-red;
+}
+
+.pastel-orange-bg {
+    background-color: $pastel-orange;
+}
+
+.pastel-yellow-bg {
+    background-color: $pastel-yellow;
+}
+
+.pastel-green-bg {
+    background-color: $pastel-green;
+}
+
+.pastel-turquoise-bg {
+    background-color: $pastel-turquoise;
+}
+
+.pastel-aqua-bg {
+    background-color: $pastel-aqua;
+}
+
+.pastel-blue-bg {
+    background-color: $pastel-blue;
+}
+
+.pastel-purple-bg {
+    background-color: $pastel-purple;
+}
+
+.pastel-pink-bg {
+    background-color: $pastel-pink;
+}
+
+.pastel-gray-bg {
+    background-color: $pastel-gray;
+}
+
+.metallic-red-bg {
+    background-color: $metallic-red;
+}
+
+.metallic-orange-bg {
+    background-color: $metallic-orange;
+}
+
+.metallic-yellow-bg {
+    background-color: $metallic-yellow;
+}
+
+.metallic-green-bg {
+    background-color: $metallic-green;
+}
+
+.metallic-turquoise-bg {
+    background-color: $metallic-turquoise;
+}
+
+.metallic-aqua-bg {
+    background-color: $metallic-aqua;
+}
+
+.metallic-blue-bg {
+    background-color: $metallic-blue;
+}
+
+.metallic-purple-bg {
+    background-color: $metallic-purple;
+}
+
+.metallic-pink-bg {
+    background-color: $metallic-pink;
+}
+
+.metallic-gray-bg {
+    background-color: $metallic-gray;
+}
+
+@media(max-width:480px) {
+    #style-switcher {
+        top: 30px;
+    }
+}
+
+.purchase {
+  background:orange;
+  padding: 75px 0;
+}
+
+.preview {
+  background: #e0ded9;
+}
+.preview header {
+  background-image: url('../images/header_background.jpg');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  padding: 40px 0;
+}
+.preview header h1 {
+  font-size: 60px;
+}
+.preview .pages {
+  padding: 50px 0;
+}
+.preview .pages img {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 30px;
+}
+.preview .pages img:hover {
+  opacity: 0.5;
+}

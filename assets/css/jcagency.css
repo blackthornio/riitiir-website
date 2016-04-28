@@ -1,0 +1,3412 @@
+.pace {
+  -webkit-pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+.pace-inactive {
+  display: none;
+}
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 2px;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #29d;
+  border-left-color: #29d;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes pace-spinner {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes pace-spinner {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes pace-spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes pace-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* CSS Table of Contents
+- Helper classes
+- Animation
+- Global Components
+- Buttons
+- Navigation Bar - Default (Dark)
+- Navigation Bar - Inverse (Light)
+- Intro
+- Testimonials
+- Signup
+- Pricing
+- Header
+- Global Section Styles
+- Services Section
+- Portfoio Section
+- Blog
+- Timeline
+- Team section
+- Clients Aside
+- Contact
+- Icons
+- Video
+- Font styles
+- Media Queries
+*/
+.hidden {
+  opacity: 0 !important;
+}
+.visible {
+  opacity: 1 !important;
+}
+.bg-light-gray {
+  background-color: #f7f7f7;
+}
+.bg-darkest-gray {
+  background-color: #222222;
+}
+.text-muted {
+  color: #777777;
+}
+.text-primary {
+  color: #0096db;
+}
+.pad-75 {
+  padding: 75px 0;
+}
+.pad-75 h2 {
+  margin-bottom: 75px;
+}
+.pad-150-top {
+  padding: 150px 0 0;
+}
+@-webkit-keyframes pulse {
+  0 {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes pulse {
+  0 {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+.large {
+  font-size: 16px;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+  color: #0073a8;
+}
+a {
+  color: #0096db;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.img-centered {
+  margin: 0 auto;
+}
+.btn {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.btn-primary {
+  color: white;
+  background-color: #0096db;
+  border: 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #0073a8;
+  border-color: #006c9e;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #0096db;
+  border: 0;
+}
+.btn-primary .badge {
+  color: #0096db;
+  background-color: white;
+}
+.btn-xl {
+  color: white;
+  background-color: #0096db;
+  border: 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  color: white;
+  background-color: #0073a8;
+  border-color: #006c9e;
+}
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  background-color: #0096db;
+  border: 0;
+}
+.btn-xl .badge {
+  color: #0096db;
+  background-color: white;
+}
+.btn-round {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.btn-circle {
+  -moz-border-radius: 46px;
+  -webkit-border-radius: 46px;
+  -o-border-radius: 46px;
+  border-radius: 46px;
+}
+.btn-header {
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 3px solid white;
+}
+.btn-header:hover,
+.btn-header:focus,
+.btn-header:active,
+.btn-header.active,
+.open .dropdown-toggle.btn-header {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-header:active,
+.btn-header.active,
+.open .dropdown-toggle.btn-header {
+  background-image: none;
+}
+.btn-header.disabled,
+.btn-header[disabled],
+fieldset[disabled] .btn-header,
+.btn-header.disabled:hover,
+.btn-header[disabled]:hover,
+fieldset[disabled] .btn-header:hover,
+.btn-header.disabled:focus,
+.btn-header[disabled]:focus,
+fieldset[disabled] .btn-header:focus,
+.btn-header.disabled:active,
+.btn-header[disabled]:active,
+fieldset[disabled] .btn-header:active,
+.btn-header.disabled.active,
+.btn-header[disabled].active,
+fieldset[disabled] .btn-header.active {
+  background-color: transparent;
+  border: 0;
+}
+.btn-header .badge {
+  color: transparent;
+  background-color: white;
+}
+.btn-header:hover {
+  color: silver;
+  border-bottom: 3px solid white;
+}
+.btn-down {
+  margin-top: 15px;
+  border-radius: 35px;
+  font-size: 25px;
+  color: #ffffff;
+  background: transparent;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  position: relative;
+  z-index: 99;
+}
+.btn-down:hover,
+.btn-down:focus {
+  outline: none;
+  color: #ffffff;
+}
+.btn-down i.animated {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 1s;
+}
+.btn-down:hover i.animated {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+.navbar-default {
+  background-color: #222222;
+  border-color: transparent;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: #d9d9d9;
+}
+.navbar-default .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+.navbar-default .navbar-toggle {
+  background-color: #0096db;
+  border: none;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #0096db;
+}
+.navbar-default .nav li a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 12px;
+}
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+  color: #0096db;
+  outline: none;
+}
+.navbar-default .navbar-nav > .active > a {
+  border-radius: 0;
+  color: white;
+  background-color: #0096db;
+}
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #0073a8;
+}
+.navbar-default .dropdown li a {
+  color: black;
+}
+.navbar-inverse {
+  background-color: #ffffff;
+  border-color: transparent;
+  border-bottom: 1px solid #eee;
+}
+.navbar-inverse .navbar-brand {
+  color: #000000;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus,
+.navbar-inverse .navbar-brand:active,
+.navbar-inverse .navbar-brand.active {
+  color: #d9d9d9;
+}
+.navbar-inverse .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+.navbar-inverse .navbar-toggle {
+  background-color: #0096db;
+  border-color: #0096db;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #0096db;
+}
+.navbar-inverse .nav li a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000000;
+  font-size: 12px;
+}
+.navbar-inverse .nav li a:hover,
+.navbar-inverse .nav li a:focus {
+  color: #0096db;
+  outline: none;
+}
+.navbar-inverse .navbar-nav > .active > a {
+  border-radius: 0;
+  color: white;
+  background-color: #0096db;
+}
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #0073a8;
+}
+/* Intro */
+.intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+}
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
+}
+/* Testimonials */
+.testimonials {
+  text-align: center;
+}
+.testimonials .testimonials-carousel .item {
+  padding: 0;
+}
+.testimonials .testimonials-carousel .item p.quote {
+  margin-bottom: 30px;
+}
+.testimonials .testimonials-carousel .item .testimonial-info {
+  margin-bottom: 30px;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-author {
+  display: inline-block;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .name {
+  text-transform: uppercase;
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .colored {
+  margin: 3px auto;
+  max-width: 50px;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-author p {
+  margin: 0;
+}
+.testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .stars {
+  color: #f1c40f;
+}
+aside.cta-quote {
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  background: no-repeat center center scroll;
+  background-color: #222;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+aside.cta-quote span.quote {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+}
+/* Pricing */
+.pricing {
+  color: #fff;
+  background: no-repeat center center scroll;
+  background-color: #222;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.pricing-item {
+  z-index: 1;
+  margin-bottom: 30px;
+  padding: 30px;
+  text-align: center;
+  color: #222;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.pricing-item h3 {
+  margin: 0;
+}
+.pricing-item hr {
+  max-width: 100px;
+}
+.pricing-item .price {
+  margin-bottom: 20px;
+}
+.pricing-item .price .number {
+  font-size: 50px;
+  font-weight: 900;
+}
+.pricing-item .price .number sup {
+  font-size: 30px;
+}
+.pricing-item .list-group-item {
+  border-radius: 0;
+}
+header {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+header .intro-text {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  z-index: 99;
+  position: relative;
+}
+header .intro-text .intro-lead-in {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+header .intro-text .intro-heading {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+header .carousel-inner .item {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+header .carousel .item .row {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+header .carousel-control {
+  width: 8%;
+}
+header .carousel-control .fa {
+  position: absolute;
+  top: 45%;
+  z-index: 5;
+  display: inline-block;
+  font-size: 35px;
+}
+header .carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70, 70, 70, 0.25);
+  border: 1px solid white;
+  margin: 0 3px 0 3px;
+  width: 9px;
+  height: 9px;
+}
+header .carousel-indicators .active {
+  background-color: white;
+  border: 1px solid white;
+  width: 9px;
+  height: 9px;
+  margin: 0 3px 0 3px;
+}
+section {
+  padding: 100px 0;
+}
+section .section-heading {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section .section-subheading {
+  font-size: 18px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-weight: 400;
+  margin-bottom: 150px;
+}
+#services [class*="icon-"] {
+  font-size: 60px;
+}
+.service-item {
+  margin-bottom: 55px;
+}
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+.service-item .fa-inverse {
+  -webkit-transform: scale(1);
+  transform: rotate(0);
+  -webkit-transition: all 0.3s ease-out;
+}
+.service-item:hover .fa-inverse {
+  -webkit-transform: scale(1.5);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#portfolio .portfolio-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+#portfolio .portfolio-item .portfolio-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  background: rgba(0, 150, 219, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+}
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+}
+#portfolio .portfolio-item .portfolio-caption h4 {
+  text-transform: none;
+  margin: 0;
+}
+#portfolio .portfolio-item .portfolio-caption p {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  margin: 0;
+}
+#portfolio * {
+  z-index: 2;
+}
+#filters {
+  margin-bottom: 100px;
+}
+.blog-col {
+  margin: 0 auto;
+  max-width: 400px;
+}
+.blog-col .blog-preview-img {
+  display: block;
+  position: relative;
+}
+.blog-col .blog-preview-img .caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #0096db;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+}
+.blog-col .blog-preview-img .caption .caption-content {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -15px;
+  text-align: center;
+  color: #f4f5f7;
+}
+.blog-col .blog-preview-img .caption:hover {
+  opacity: 1;
+}
+.blog-col .blog-preview-img * {
+  z-index: 2;
+}
+.blog-col .blog-preview-content {
+  margin-bottom: 15px;
+  padding: 25px;
+  color: #3e444d;
+  background-color: white;
+}
+.blog-col .blog-preview-content h3 {
+  margin: 0 0 10px;
+}
+.blog-col .blog-preview-content h3 a {
+  color: #3e444d;
+}
+.blog-col .blog-preview-content h3 a:hover {
+  color: #c2b49a;
+}
+.blog-col .blog-preview-content p {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.blog-col .blog-preview-content ul.meta {
+  font-size: 14px;
+  color: rgba(62, 68, 77, 0.5);
+}
+.blog-col .blog-preview-content .continue {
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+.blog-2 .blog-col {
+  margin-bottom: 15px;
+}
+.blog-2 .blog-col .blog-item {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.blog-2 .blog-col .blog-item .caption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(62, 68, 77, 0.9);
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+}
+.blog-2 .blog-col .blog-item .caption .caption-content {
+  padding: 25px;
+  color: #f4f5f7;
+}
+.blog-2 .blog-col .blog-item .caption .caption-content h3 {
+  margin: 0;
+  padding-bottom: 15px;
+}
+.blog-2 .blog-col .blog-item .caption .caption-content p {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+.blog-2 .blog-col .blog-item .caption .caption-content ul.meta {
+  font-size: 14px;
+  color: rgba(62, 68, 77, 0.5);
+}
+.blog-2 .blog-col .blog-item .caption:hover {
+  opacity: 1;
+}
+.blog-2 * {
+  z-index: 2;
+}
+#signup input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 2px;
+  background-color: #f1f1f1;
+  left: 40px;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 50px;
+  position: relative;
+  min-height: 50px;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li .timeline-panel {
+  width: 100%;
+  float: right;
+  padding: 0 20px 0 100px;
+  position: relative;
+  text-align: left;
+}
+.timeline > li .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline > li .timeline-image {
+  left: 0;
+  margin-left: 0;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 100;
+  background-color: #0096db;
+  color: white;
+  border-radius: 100%;
+  border: 7px solid #f1f1f1;
+  text-align: center;
+}
+.timeline > li .timeline-image h4 {
+  font-size: 10px;
+  margin-top: 12px;
+  line-height: 14px;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  text-align: left;
+  padding: 0 20px 0 100px;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+.timeline .timeline-heading h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline .timeline-heading .subheading {
+  text-transform: none;
+}
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+  margin-bottom: 0;
+}
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-member img {
+  margin: 0 auto;
+  border: 7px solid white;
+  max-width: 250px;
+}
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.team-member p {
+  margin-top: 0;
+}
+aside.clients img {
+  margin: 50px auto;
+}
+aside.clients .carousel-indicators {
+  position: static;
+  margin: 0 auto 50px auto;
+  bottom: 0;
+  left: auto;
+}
+aside.clients .carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70, 70, 70, 0.25);
+  border: 0;
+  margin: 0 3px 0 3px;
+  width: 10px;
+  height: 10px;
+}
+aside.clients .carousel-indicators .active {
+  background-color: #777;
+  border: 0;
+  width: 10px;
+  height: 10px;
+}
+#contact {
+  background-color: #222222;
+  background-image: url('../img/map-image.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#contact .section-heading {
+  color: white;
+}
+#contact .form-group {
+  margin-bottom: 25px;
+}
+#contact .form-group input,
+#contact .form-group textarea {
+  padding: 20px;
+}
+#contact .form-group input.form-control {
+  height: auto;
+}
+#contact .form-group textarea.form-control {
+  height: 236px;
+}
+#contact .form-control:focus {
+  border-color: #0096db;
+  box-shadow: none;
+}
+#contact ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+#contact :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+#contact ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+#contact :-ms-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #bbbbbb;
+}
+#contact .text-danger {
+  color: #e74c3c;
+}
+#map {
+  padding: 0;
+}
+#gmap {
+  display: block;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+}
+#gmap .infowin {
+  padding: 10px 20px;
+}
+#gmap .infowin p {
+  margin-bottom: 10px;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+#gmap .infowin a {
+  color: #F28C83;
+}
+#gmap .infowin a:hover {
+  text-decoration: underline;
+}
+.subfooter {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+.subfooter .brand {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+.subfooter a {
+  color: black;
+}
+.subfooter a:hover {
+  color: gray;
+  text-decoration: none;
+}
+.subfooter p {
+  font-size: 15px;
+}
+.subfooter h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.subfooter .contact-details {
+  margin: 75px 0;
+}
+.subfooter .contact-details .fa {
+  font-size: 64px;
+}
+.subfooter .social {
+  margin-bottom: 75px;
+}
+.subfooter .copyright .small {
+  font-size: 14px;
+}
+footer {
+  background: #dedede;
+  padding: 25px 0;
+}
+footer p,
+footer a {
+  font-size: 12px;
+  color: gray;
+  text-decoration: none;
+}
+footer a:hover {
+  color: black;
+  text-decoration: none;
+}
+.btn-full-width {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  background: #0096db;
+  color: #000000;
+  font-size: 28px;
+}
+ul.social-buttons {
+  margin-bottom: 0;
+}
+ul.social-buttons li a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #0096db;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  color: #000000;
+}
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+  outline: none;
+}
+.popup-modal .modal-content {
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  min-height: 100%;
+  padding: 100px 0;
+  text-align: center;
+}
+.popup-modal .modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 3em;
+}
+.popup-modal .modal-content p {
+  margin-bottom: 30px;
+}
+.popup-modal .modal-content .item-intro {
+  margin: 20px 0 30px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+.popup-modal .modal-content .list-inline {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.popup-modal .modal-content img {
+  margin-bottom: 30px;
+}
+.popup-modal .close-modal {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.popup-modal .close-modal:hover {
+  opacity: 0.3;
+}
+.popup-modal .close-modal .lr {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #222222;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari and Chrome */
+  z-index: 1051;
+}
+.popup-modal .close-modal .lr .rl {
+  height: 75px;
+  width: 1px;
+  background-color: #222222;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
+  z-index: 1052;
+}
+.fa-icon-grid span {
+  display: block;
+  font-size: 16px;
+  color: gray;
+}
+.glyph {
+  font-size: 30px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  width: 20%;
+}
+@media screen and (max-width: 700px) {
+  .glyph {
+    width: 50%;
+  }
+}
+.glyph input {
+  font-family: consolas, monospace;
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  box-shadow: 0 0 0 1px #ccc;
+  padding: .125em;
+}
+.box1 {
+  font-size: 16px;
+  display: inline-block;
+  width: 15em;
+  padding: .25em .5em;
+  background: #eee;
+  margin: .5em 1em .5em 0;
+}
+.video-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+body.contemporary p {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.contemporary header .intro-text .intro-lead-in {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.contemporary h1,
+body.contemporary h2,
+body.contemporary h3,
+body.contemporary h4,
+body.contemporary h5,
+body.contemporary h6 {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+body.contemporary p.lead {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+body.contemporary header .brand-name {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+body.contemporary .about-carousel .owl-controls .owl-prev,
+body.contemporary .about-carousel .owl-controls .owl-next {
+  line-height: 55px;
+}
+body.contemporary .portfolio-carousel .item .project-details .project-name {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+body.contemporary .testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .name {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+body.retro .nav li a {
+  font-family: "Unna", Georgia, 'Times New Roman', sans-serif;
+}
+body.retro p {
+  font-family: "Unna", Georgia, 'Times New Roman', sans-serif;
+}
+body.retro header .intro-text .intro-lead-in {
+  font-family: "Dynalight", Georgia, 'Times New Roman', sans-serif;
+}
+body.retro header .intro-text .intro-heading {
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.retro h1,
+body.retro h2,
+body.retro h3,
+body.retro h4,
+body.retro h5,
+body.retro h6 {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.retro aside.cta-quote span.quote {
+  font-family: "Megrim", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.retro p.lead {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.retro .navbar-default .navbar-brand,
+body.retro .nav .navbar-brand {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.retro .about-carousel .owl-controls .owl-prev,
+body.retro .about-carousel .owl-controls .owl-next {
+  line-height: 55px;
+}
+body.retro .portfolio-carousel .item .project-details .project-name {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.retro #portfolio .portfolio-item .portfolio-caption h4 {
+  font-family: "Megrim", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.retro #portfolio .portfolio-item .portfolio-caption p {
+  font-family: "Unna", Georgia, 'Times New Roman', sans-serif;
+}
+body.retro .pricing .pricing-item .price,
+body.retro .pricing .pricing-item .list-group-item {
+  font-family: "Unna", Georgia, 'Times New Roman', sans-serif;
+}
+body.retro .testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .name {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.retro button,
+body.retro .btn {
+  text-transform: uppercase;
+  font-family: "Monoton", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.classical .nav li a {
+  font-family: "Merriweather", Georgia, 'Times New Roman', sans-serif;
+}
+body.classical p {
+  font-family: "Merriweather", Georgia, 'Times New Roman', sans-serif;
+}
+body.classical header .intro-text .intro-lead-in {
+  font-family: "Merriweather", Georgia, 'Times New Roman', sans-serif;
+}
+body.classical header .intro-text .intro-heading {
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.classical h1,
+body.classical h2,
+body.classical h3,
+body.classical h4,
+body.classical h5,
+body.classical h6 {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.classical aside.cta-quote span.quote {
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.classical p.lead {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.classical .navbar-default .navbar-brand,
+body.classical .nav .navbar-brand {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.classical .about-carousel .owl-controls .owl-prev,
+body.classical .about-carousel .owl-controls .owl-next {
+  line-height: 55px;
+}
+body.classical .portfolio-carousel .item .project-details .project-name {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.classical #portfolio .portfolio-item .portfolio-caption h4 {
+  font-family: "Megrim", Georgia, 'Times New Roman', sans-serif;
+  font-weight: normal;
+}
+body.classical #portfolio .portfolio-item .portfolio-caption p {
+  font-family: "Merriweather", Georgia, 'Times New Roman', sans-serif;
+}
+body.classical .pricing .pricing-item .price,
+body.classical .pricing .pricing-item .list-group-item {
+  font-family: "Merriweather", Georgia, 'Times New Roman', sans-serif;
+}
+body.classical .testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .name {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.classical button,
+body.classical .btn {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", Georgia, 'Times New Roman', sans-serif;
+  font-weight: 700;
+}
+body.solid-red .text-primary,
+body.solid-red ul.social-buttons li a,
+body.solid-red a,
+body.solid-red .navbar-inverse .nav li a:hover,
+body.solid-red .navbar-inverse .nav li a:focus,
+body.solid-red .navbar-default .nav li a:hover,
+body.solid-red .navbar-default .nav li a:focus {
+  color: #f63440;
+}
+body.solid-red .navbar-toggle,
+body.solid-red .navbar-inverse .navbar-nav > li.active > a,
+body.solid-red .navbar-default .navbar-nav > .active > a,
+body.solid-red #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-red .timeline > li .timeline-image,
+body.solid-red .blog-col .blog-preview-img .caption {
+  background-color: #f63440;
+}
+body.solid-red a:hover,
+body.solid-red a:focus,
+body.solid-red a:active,
+body.solid-red a.active {
+  color: #ed0a18;
+}
+body.solid-red .btn-primary,
+body.solid-red .btn-xl {
+  background-color: #f63440;
+  border: 0;
+  color: white;
+}
+body.solid-red .navbar-nav li.active a:hover,
+body.solid-red .navbar-toggle:hover,
+body.solid-red .navbar-toggle:focus,
+body.solid-red .btn-primary:hover,
+body.solid-red .btn-primary:focus,
+body.solid-red .btn-primary.active,
+body.solid-red .btn-xl:hover,
+body.solid-red .btn-xl:focus,
+body.solid-red .btn-xl:active,
+body.solid-red .btn-xl.active,
+body.solid-red .open .dropdown-toggle.btn-xl {
+  background-color: #ed0a18;
+  border: 0;
+  color: white;
+}
+body.solid-red a.carousel-control,
+body.solid-red a.btn-circle {
+  color: white;
+}
+body.solid-red footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-red footer a:hover {
+  color: #ffffff;
+}
+body.solid-red .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-orange .text-primary,
+body.solid-orange ul.social-buttons li a,
+body.solid-orange a,
+body.solid-orange .navbar-inverse .nav li a:hover,
+body.solid-orange .navbar-inverse .nav li a:focus,
+body.solid-orange .navbar-default .nav li a:hover,
+body.solid-orange .navbar-default .nav li a:focus {
+  color: #ff5200;
+}
+body.solid-orange .navbar-toggle,
+body.solid-orange .navbar-inverse .navbar-nav > li.active > a,
+body.solid-orange .navbar-default .navbar-nav > .active > a,
+body.solid-orange #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-orange .timeline > li .timeline-image,
+body.solid-orange .blog-col .blog-preview-img .caption {
+  background-color: #ff5200;
+}
+body.solid-orange a:hover,
+body.solid-orange a:focus,
+body.solid-orange a:active,
+body.solid-orange a.active {
+  color: #cc4200;
+}
+body.solid-orange .btn-primary,
+body.solid-orange .btn-xl {
+  background-color: #ff5200;
+  border: 0;
+  color: white;
+}
+body.solid-orange .navbar-nav li.active a:hover,
+body.solid-orange .navbar-toggle:hover,
+body.solid-orange .navbar-toggle:focus,
+body.solid-orange .btn-primary:hover,
+body.solid-orange .btn-primary:focus,
+body.solid-orange .btn-primary.active,
+body.solid-orange .btn-xl:hover,
+body.solid-orange .btn-xl:focus,
+body.solid-orange .btn-xl:active,
+body.solid-orange .btn-xl.active,
+body.solid-orange .open .dropdown-toggle.btn-xl {
+  background-color: #cc4200;
+  border: 0;
+  color: white;
+}
+body.solid-orange a.carousel-control,
+body.solid-orange a.btn-circle {
+  color: white;
+}
+body.solid-orange footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-orange footer a:hover {
+  color: #ffffff;
+}
+body.solid-orange .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-yellow .text-primary,
+body.solid-yellow ul.social-buttons li a,
+body.solid-yellow a,
+body.solid-yellow .navbar-inverse .nav li a:hover,
+body.solid-yellow .navbar-inverse .nav li a:focus,
+body.solid-yellow .navbar-default .nav li a:hover,
+body.solid-yellow .navbar-default .nav li a:focus {
+  color: #ffde00;
+}
+body.solid-yellow .navbar-toggle,
+body.solid-yellow .navbar-inverse .navbar-nav > li.active > a,
+body.solid-yellow .navbar-default .navbar-nav > .active > a,
+body.solid-yellow #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-yellow .timeline > li .timeline-image,
+body.solid-yellow .blog-col .blog-preview-img .caption {
+  background-color: #ffde00;
+}
+body.solid-yellow a:hover,
+body.solid-yellow a:focus,
+body.solid-yellow a:active,
+body.solid-yellow a.active {
+  color: #ccb200;
+}
+body.solid-yellow .btn-primary,
+body.solid-yellow .btn-xl {
+  background-color: #ffde00;
+  border: 0;
+  color: white;
+}
+body.solid-yellow .navbar-nav li.active a:hover,
+body.solid-yellow .navbar-toggle:hover,
+body.solid-yellow .navbar-toggle:focus,
+body.solid-yellow .btn-primary:hover,
+body.solid-yellow .btn-primary:focus,
+body.solid-yellow .btn-primary.active,
+body.solid-yellow .btn-xl:hover,
+body.solid-yellow .btn-xl:focus,
+body.solid-yellow .btn-xl:active,
+body.solid-yellow .btn-xl.active,
+body.solid-yellow .open .dropdown-toggle.btn-xl {
+  background-color: #ccb200;
+  border: 0;
+  color: white;
+}
+body.solid-yellow a.carousel-control,
+body.solid-yellow a.btn-circle {
+  color: white;
+}
+body.solid-yellow footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-yellow footer a:hover {
+  color: #ffffff;
+}
+body.solid-yellow .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-green .text-primary,
+body.solid-green ul.social-buttons li a,
+body.solid-green a,
+body.solid-green .navbar-inverse .nav li a:hover,
+body.solid-green .navbar-inverse .nav li a:focus,
+body.solid-green .navbar-default .nav li a:hover,
+body.solid-green .navbar-default .nav li a:focus {
+  color: #00a888;
+}
+body.solid-green .navbar-toggle,
+body.solid-green .navbar-inverse .navbar-nav > li.active > a,
+body.solid-green .navbar-default .navbar-nav > .active > a,
+body.solid-green #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-green .timeline > li .timeline-image,
+body.solid-green .blog-col .blog-preview-img .caption {
+  background-color: #00a888;
+}
+body.solid-green a:hover,
+body.solid-green a:focus,
+body.solid-green a:active,
+body.solid-green a.active {
+  color: #00755f;
+}
+body.solid-green .btn-primary,
+body.solid-green .btn-xl {
+  background-color: #00a888;
+  border: 0;
+  color: white;
+}
+body.solid-green .navbar-nav li.active a:hover,
+body.solid-green .navbar-toggle:hover,
+body.solid-green .navbar-toggle:focus,
+body.solid-green .btn-primary:hover,
+body.solid-green .btn-primary:focus,
+body.solid-green .btn-primary.active,
+body.solid-green .btn-xl:hover,
+body.solid-green .btn-xl:focus,
+body.solid-green .btn-xl:active,
+body.solid-green .btn-xl.active,
+body.solid-green .open .dropdown-toggle.btn-xl {
+  background-color: #00755f;
+  border: 0;
+  color: white;
+}
+body.solid-green a.carousel-control,
+body.solid-green a.btn-circle {
+  color: white;
+}
+body.solid-green footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-green footer a:hover {
+  color: #ffffff;
+}
+body.solid-green .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-aqua .text-primary,
+body.solid-aqua ul.social-buttons li a,
+body.solid-aqua a,
+body.solid-aqua .navbar-inverse .nav li a:hover,
+body.solid-aqua .navbar-inverse .nav li a:focus,
+body.solid-aqua .navbar-default .nav li a:hover,
+body.solid-aqua .navbar-default .nav li a:focus {
+  color: #00add8;
+}
+body.solid-aqua .navbar-toggle,
+body.solid-aqua .navbar-inverse .navbar-nav > li.active > a,
+body.solid-aqua .navbar-default .navbar-nav > .active > a,
+body.solid-aqua #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-aqua .timeline > li .timeline-image,
+body.solid-aqua .blog-col .blog-preview-img .caption {
+  background-color: #00add8;
+}
+body.solid-aqua a:hover,
+body.solid-aqua a:focus,
+body.solid-aqua a:active,
+body.solid-aqua a.active {
+  color: #0084a5;
+}
+body.solid-aqua .btn-primary,
+body.solid-aqua .btn-xl {
+  background-color: #00add8;
+  border: 0;
+  color: white;
+}
+body.solid-aqua .navbar-nav li.active a:hover,
+body.solid-aqua .navbar-toggle:hover,
+body.solid-aqua .navbar-toggle:focus,
+body.solid-aqua .btn-primary:hover,
+body.solid-aqua .btn-primary:focus,
+body.solid-aqua .btn-primary.active,
+body.solid-aqua .btn-xl:hover,
+body.solid-aqua .btn-xl:focus,
+body.solid-aqua .btn-xl:active,
+body.solid-aqua .btn-xl.active,
+body.solid-aqua .open .dropdown-toggle.btn-xl {
+  background-color: #0084a5;
+  border: 0;
+  color: white;
+}
+body.solid-aqua a.carousel-control,
+body.solid-aqua a.btn-circle {
+  color: white;
+}
+body.solid-aqua footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-aqua footer a:hover {
+  color: #ffffff;
+}
+body.solid-aqua .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-turquoise .text-primary,
+body.solid-turquoise ul.social-buttons li a,
+body.solid-turquoise a,
+body.solid-turquoise .navbar-inverse .nav li a:hover,
+body.solid-turquoise .navbar-inverse .nav li a:focus,
+body.solid-turquoise .navbar-default .nav li a:hover,
+body.solid-turquoise .navbar-default .nav li a:focus {
+  color: #0099a9;
+}
+body.solid-turquoise .navbar-toggle,
+body.solid-turquoise .navbar-inverse .navbar-nav > li.active > a,
+body.solid-turquoise .navbar-default .navbar-nav > .active > a,
+body.solid-turquoise #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-turquoise .timeline > li .timeline-image,
+body.solid-turquoise .blog-col .blog-preview-img .caption {
+  background-color: #0099a9;
+}
+body.solid-turquoise a:hover,
+body.solid-turquoise a:focus,
+body.solid-turquoise a:active,
+body.solid-turquoise a.active {
+  color: #006b76;
+}
+body.solid-turquoise .btn-primary,
+body.solid-turquoise .btn-xl {
+  background-color: #0099a9;
+  border: 0;
+  color: white;
+}
+body.solid-turquoise .navbar-nav li.active a:hover,
+body.solid-turquoise .navbar-toggle:hover,
+body.solid-turquoise .navbar-toggle:focus,
+body.solid-turquoise .btn-primary:hover,
+body.solid-turquoise .btn-primary:focus,
+body.solid-turquoise .btn-primary.active,
+body.solid-turquoise .btn-xl:hover,
+body.solid-turquoise .btn-xl:focus,
+body.solid-turquoise .btn-xl:active,
+body.solid-turquoise .btn-xl.active,
+body.solid-turquoise .open .dropdown-toggle.btn-xl {
+  background-color: #006b76;
+  border: 0;
+  color: white;
+}
+body.solid-turquoise a.carousel-control,
+body.solid-turquoise a.btn-circle {
+  color: white;
+}
+body.solid-turquoise footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-turquoise footer a:hover {
+  color: #ffffff;
+}
+body.solid-turquoise .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-blue .text-primary,
+body.solid-blue ul.social-buttons li a,
+body.solid-blue a,
+body.solid-blue .navbar-inverse .nav li a:hover,
+body.solid-blue .navbar-inverse .nav li a:focus,
+body.solid-blue .navbar-default .nav li a:hover,
+body.solid-blue .navbar-default .nav li a:focus {
+  color: #000f9f;
+}
+body.solid-blue .navbar-toggle,
+body.solid-blue .navbar-inverse .navbar-nav > li.active > a,
+body.solid-blue .navbar-default .navbar-nav > .active > a,
+body.solid-blue #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-blue .timeline > li .timeline-image,
+body.solid-blue .blog-col .blog-preview-img .caption {
+  background-color: #000f9f;
+}
+body.solid-blue a:hover,
+body.solid-blue a:focus,
+body.solid-blue a:active,
+body.solid-blue a.active {
+  color: #000a6c;
+}
+body.solid-blue .btn-primary,
+body.solid-blue .btn-xl {
+  background-color: #000f9f;
+  border: 0;
+  color: white;
+}
+body.solid-blue .navbar-nav li.active a:hover,
+body.solid-blue .navbar-toggle:hover,
+body.solid-blue .navbar-toggle:focus,
+body.solid-blue .btn-primary:hover,
+body.solid-blue .btn-primary:focus,
+body.solid-blue .btn-primary.active,
+body.solid-blue .btn-xl:hover,
+body.solid-blue .btn-xl:focus,
+body.solid-blue .btn-xl:active,
+body.solid-blue .btn-xl.active,
+body.solid-blue .open .dropdown-toggle.btn-xl {
+  background-color: #000a6c;
+  border: 0;
+  color: white;
+}
+body.solid-blue a.carousel-control,
+body.solid-blue a.btn-circle {
+  color: white;
+}
+body.solid-blue footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-blue footer a:hover {
+  color: #ffffff;
+}
+body.solid-blue .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-purple .text-primary,
+body.solid-purple ul.social-buttons li a,
+body.solid-purple a,
+body.solid-purple .navbar-inverse .nav li a:hover,
+body.solid-purple .navbar-inverse .nav li a:focus,
+body.solid-purple .navbar-default .nav li a:hover,
+body.solid-purple .navbar-default .nav li a:focus {
+  color: #c129b9;
+}
+body.solid-purple .navbar-toggle,
+body.solid-purple .navbar-inverse .navbar-nav > li.active > a,
+body.solid-purple .navbar-default .navbar-nav > .active > a,
+body.solid-purple #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-purple .timeline > li .timeline-image,
+body.solid-purple .blog-col .blog-preview-img .caption {
+  background-color: #c129b9;
+}
+body.solid-purple a:hover,
+body.solid-purple a:focus,
+body.solid-purple a:active,
+body.solid-purple a.active {
+  color: #972091;
+}
+body.solid-purple .btn-primary,
+body.solid-purple .btn-xl {
+  background-color: #c129b9;
+  border: 0;
+  color: white;
+}
+body.solid-purple .navbar-nav li.active a:hover,
+body.solid-purple .navbar-toggle:hover,
+body.solid-purple .navbar-toggle:focus,
+body.solid-purple .btn-primary:hover,
+body.solid-purple .btn-primary:focus,
+body.solid-purple .btn-primary.active,
+body.solid-purple .btn-xl:hover,
+body.solid-purple .btn-xl:focus,
+body.solid-purple .btn-xl:active,
+body.solid-purple .btn-xl.active,
+body.solid-purple .open .dropdown-toggle.btn-xl {
+  background-color: #972091;
+  border: 0;
+  color: white;
+}
+body.solid-purple a.carousel-control,
+body.solid-purple a.btn-circle {
+  color: white;
+}
+body.solid-purple footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-purple footer a:hover {
+  color: #ffffff;
+}
+body.solid-purple .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-pink .text-primary,
+body.solid-pink ul.social-buttons li a,
+body.solid-pink a,
+body.solid-pink .navbar-inverse .nav li a:hover,
+body.solid-pink .navbar-inverse .nav li a:focus,
+body.solid-pink .navbar-default .nav li a:hover,
+body.solid-pink .navbar-default .nav li a:focus {
+  color: #e60895;
+}
+body.solid-pink .navbar-toggle,
+body.solid-pink .navbar-inverse .navbar-nav > li.active > a,
+body.solid-pink .navbar-default .navbar-nav > .active > a,
+body.solid-pink #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-pink .timeline > li .timeline-image,
+body.solid-pink .blog-col .blog-preview-img .caption {
+  background-color: #e60895;
+}
+body.solid-pink a:hover,
+body.solid-pink a:focus,
+body.solid-pink a:active,
+body.solid-pink a.active {
+  color: #b50675;
+}
+body.solid-pink .btn-primary,
+body.solid-pink .btn-xl {
+  background-color: #e60895;
+  border: 0;
+  color: white;
+}
+body.solid-pink .navbar-nav li.active a:hover,
+body.solid-pink .navbar-toggle:hover,
+body.solid-pink .navbar-toggle:focus,
+body.solid-pink .btn-primary:hover,
+body.solid-pink .btn-primary:focus,
+body.solid-pink .btn-primary.active,
+body.solid-pink .btn-xl:hover,
+body.solid-pink .btn-xl:focus,
+body.solid-pink .btn-xl:active,
+body.solid-pink .btn-xl.active,
+body.solid-pink .open .dropdown-toggle.btn-xl {
+  background-color: #b50675;
+  border: 0;
+  color: white;
+}
+body.solid-pink a.carousel-control,
+body.solid-pink a.btn-circle {
+  color: white;
+}
+body.solid-pink footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-pink footer a:hover {
+  color: #ffffff;
+}
+body.solid-pink .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.solid-gray .text-primary,
+body.solid-gray ul.social-buttons li a,
+body.solid-gray a,
+body.solid-gray .navbar-inverse .nav li a:hover,
+body.solid-gray .navbar-inverse .nav li a:focus,
+body.solid-gray .navbar-default .nav li a:hover,
+body.solid-gray .navbar-default .nav li a:focus {
+  color: #a8a8aa;
+}
+body.solid-gray .navbar-toggle,
+body.solid-gray .navbar-inverse .navbar-nav > li.active > a,
+body.solid-gray .navbar-default .navbar-nav > .active > a,
+body.solid-gray #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.solid-gray .timeline > li .timeline-image,
+body.solid-gray .blog-col .blog-preview-img .caption {
+  background-color: #a8a8aa;
+}
+body.solid-gray a:hover,
+body.solid-gray a:focus,
+body.solid-gray a:active,
+body.solid-gray a.active {
+  color: #8e8e91;
+}
+body.solid-gray .btn-primary,
+body.solid-gray .btn-xl {
+  background-color: #a8a8aa;
+  border: 0;
+  color: white;
+}
+body.solid-gray .navbar-nav li.active a:hover,
+body.solid-gray .navbar-toggle:hover,
+body.solid-gray .navbar-toggle:focus,
+body.solid-gray .btn-primary:hover,
+body.solid-gray .btn-primary:focus,
+body.solid-gray .btn-primary.active,
+body.solid-gray .btn-xl:hover,
+body.solid-gray .btn-xl:focus,
+body.solid-gray .btn-xl:active,
+body.solid-gray .btn-xl.active,
+body.solid-gray .open .dropdown-toggle.btn-xl {
+  background-color: #8e8e91;
+  border: 0;
+  color: white;
+}
+body.solid-gray a.carousel-control,
+body.solid-gray a.btn-circle {
+  color: white;
+}
+body.solid-gray footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.solid-gray footer a:hover {
+  color: #ffffff;
+}
+body.solid-gray .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-red .text-primary,
+body.pastel-red ul.social-buttons li a,
+body.pastel-red a,
+body.pastel-red .navbar-inverse .nav li a:hover,
+body.pastel-red .navbar-inverse .nav li a:focus,
+body.pastel-red .navbar-default .nav li a:hover,
+body.pastel-red .navbar-default .nav li a:focus {
+  color: #feafbc;
+}
+body.pastel-red .navbar-toggle,
+body.pastel-red .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-red .navbar-default .navbar-nav > .active > a,
+body.pastel-red #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-red .timeline > li .timeline-image,
+body.pastel-red .blog-col .blog-preview-img .caption {
+  background-color: #feafbc;
+}
+body.pastel-red a:hover,
+body.pastel-red a:focus,
+body.pastel-red a:active,
+body.pastel-red a.active {
+  color: #fd7d92;
+}
+body.pastel-red .btn-primary,
+body.pastel-red .btn-xl {
+  background-color: #feafbc;
+  border: 0;
+  color: white;
+}
+body.pastel-red .navbar-nav li.active a:hover,
+body.pastel-red .navbar-toggle:hover,
+body.pastel-red .navbar-toggle:focus,
+body.pastel-red .btn-primary:hover,
+body.pastel-red .btn-primary:focus,
+body.pastel-red .btn-primary.active,
+body.pastel-red .btn-xl:hover,
+body.pastel-red .btn-xl:focus,
+body.pastel-red .btn-xl:active,
+body.pastel-red .btn-xl.active,
+body.pastel-red .open .dropdown-toggle.btn-xl {
+  background-color: #fd7d92;
+  border: 0;
+  color: white;
+}
+body.pastel-red a.carousel-control,
+body.pastel-red a.btn-circle {
+  color: white;
+}
+body.pastel-red footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-red footer a:hover {
+  color: #ffffff;
+}
+body.pastel-red .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-orange .text-primary,
+body.pastel-orange ul.social-buttons li a,
+body.pastel-orange a,
+body.pastel-orange .navbar-inverse .nav li a:hover,
+body.pastel-orange .navbar-inverse .nav li a:focus,
+body.pastel-orange .navbar-default .nav li a:hover,
+body.pastel-orange .navbar-default .nav li a:focus {
+  color: #ff8f6c;
+}
+body.pastel-orange .navbar-toggle,
+body.pastel-orange .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-orange .navbar-default .navbar-nav > .active > a,
+body.pastel-orange #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-orange .timeline > li .timeline-image,
+body.pastel-orange .blog-col .blog-preview-img .caption {
+  background-color: #ff8f6c;
+}
+body.pastel-orange a:hover,
+body.pastel-orange a:focus,
+body.pastel-orange a:active,
+body.pastel-orange a.active {
+  color: #ff6839;
+}
+body.pastel-orange .btn-primary,
+body.pastel-orange .btn-xl {
+  background-color: #ff8f6c;
+  border: 0;
+  color: white;
+}
+body.pastel-orange .navbar-nav li.active a:hover,
+body.pastel-orange .navbar-toggle:hover,
+body.pastel-orange .navbar-toggle:focus,
+body.pastel-orange .btn-primary:hover,
+body.pastel-orange .btn-primary:focus,
+body.pastel-orange .btn-primary.active,
+body.pastel-orange .btn-xl:hover,
+body.pastel-orange .btn-xl:focus,
+body.pastel-orange .btn-xl:active,
+body.pastel-orange .btn-xl.active,
+body.pastel-orange .open .dropdown-toggle.btn-xl {
+  background-color: #ff6839;
+  border: 0;
+  color: white;
+}
+body.pastel-orange a.carousel-control,
+body.pastel-orange a.btn-circle {
+  color: white;
+}
+body.pastel-orange footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-orange footer a:hover {
+  color: #ffffff;
+}
+body.pastel-orange .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-yellow .text-primary,
+body.pastel-yellow ul.social-buttons li a,
+body.pastel-yellow a,
+body.pastel-yellow .navbar-inverse .nav li a:hover,
+body.pastel-yellow .navbar-inverse .nav li a:focus,
+body.pastel-yellow .navbar-default .nav li a:hover,
+body.pastel-yellow .navbar-default .nav li a:focus {
+  color: #fef28b;
+}
+body.pastel-yellow .navbar-toggle,
+body.pastel-yellow .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-yellow .navbar-default .navbar-nav > .active > a,
+body.pastel-yellow #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-yellow .timeline > li .timeline-image,
+body.pastel-yellow .blog-col .blog-preview-img .caption {
+  background-color: #fef28b;
+}
+body.pastel-yellow a:hover,
+body.pastel-yellow a:focus,
+body.pastel-yellow a:active,
+body.pastel-yellow a.active {
+  color: #feec58;
+}
+body.pastel-yellow .btn-primary,
+body.pastel-yellow .btn-xl {
+  background-color: #fef28b;
+  border: 0;
+  color: white;
+}
+body.pastel-yellow .navbar-nav li.active a:hover,
+body.pastel-yellow .navbar-toggle:hover,
+body.pastel-yellow .navbar-toggle:focus,
+body.pastel-yellow .btn-primary:hover,
+body.pastel-yellow .btn-primary:focus,
+body.pastel-yellow .btn-primary.active,
+body.pastel-yellow .btn-xl:hover,
+body.pastel-yellow .btn-xl:focus,
+body.pastel-yellow .btn-xl:active,
+body.pastel-yellow .btn-xl.active,
+body.pastel-yellow .open .dropdown-toggle.btn-xl {
+  background-color: #feec58;
+  border: 0;
+  color: white;
+}
+body.pastel-yellow a.carousel-control,
+body.pastel-yellow a.btn-circle {
+  color: white;
+}
+body.pastel-yellow footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-yellow footer a:hover {
+  color: #ffffff;
+}
+body.pastel-yellow .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-green .text-primary,
+body.pastel-green ul.social-buttons li a,
+body.pastel-green a,
+body.pastel-green .navbar-inverse .nav li a:hover,
+body.pastel-green .navbar-inverse .nav li a:focus,
+body.pastel-green .navbar-default .nav li a:hover,
+body.pastel-green .navbar-default .nav li a:focus {
+  color: #a7ed8b;
+}
+body.pastel-green .navbar-toggle,
+body.pastel-green .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-green .navbar-default .navbar-nav > .active > a,
+body.pastel-green #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-green .timeline > li .timeline-image,
+body.pastel-green .blog-col .blog-preview-img .caption {
+  background-color: #a7ed8b;
+}
+body.pastel-green a:hover,
+body.pastel-green a:focus,
+body.pastel-green a:active,
+body.pastel-green a.active {
+  color: #86e65f;
+}
+body.pastel-green .btn-primary,
+body.pastel-green .btn-xl {
+  background-color: #a7ed8b;
+  border: 0;
+  color: white;
+}
+body.pastel-green .navbar-nav li.active a:hover,
+body.pastel-green .navbar-toggle:hover,
+body.pastel-green .navbar-toggle:focus,
+body.pastel-green .btn-primary:hover,
+body.pastel-green .btn-primary:focus,
+body.pastel-green .btn-primary.active,
+body.pastel-green .btn-xl:hover,
+body.pastel-green .btn-xl:focus,
+body.pastel-green .btn-xl:active,
+body.pastel-green .btn-xl.active,
+body.pastel-green .open .dropdown-toggle.btn-xl {
+  background-color: #86e65f;
+  border: 0;
+  color: white;
+}
+body.pastel-green a.carousel-control,
+body.pastel-green a.btn-circle {
+  color: white;
+}
+body.pastel-green footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-green footer a:hover {
+  color: #ffffff;
+}
+body.pastel-green .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-aqua .text-primary,
+body.pastel-aqua ul.social-buttons li a,
+body.pastel-aqua a,
+body.pastel-aqua .navbar-inverse .nav li a:hover,
+body.pastel-aqua .navbar-inverse .nav li a:focus,
+body.pastel-aqua .navbar-default .nav li a:hover,
+body.pastel-aqua .navbar-default .nav li a:focus {
+  color: #c7e2e2;
+}
+body.pastel-aqua .navbar-toggle,
+body.pastel-aqua .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-aqua .navbar-default .navbar-nav > .active > a,
+body.pastel-aqua #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-aqua .timeline > li .timeline-image,
+body.pastel-aqua .blog-col .blog-preview-img .caption {
+  background-color: #c7e2e2;
+}
+body.pastel-aqua a:hover,
+body.pastel-aqua a:focus,
+body.pastel-aqua a:active,
+body.pastel-aqua a.active {
+  color: #a5d1d1;
+}
+body.pastel-aqua .btn-primary,
+body.pastel-aqua .btn-xl {
+  background-color: #c7e2e2;
+  border: 0;
+  color: white;
+}
+body.pastel-aqua .navbar-nav li.active a:hover,
+body.pastel-aqua .navbar-toggle:hover,
+body.pastel-aqua .navbar-toggle:focus,
+body.pastel-aqua .btn-primary:hover,
+body.pastel-aqua .btn-primary:focus,
+body.pastel-aqua .btn-primary.active,
+body.pastel-aqua .btn-xl:hover,
+body.pastel-aqua .btn-xl:focus,
+body.pastel-aqua .btn-xl:active,
+body.pastel-aqua .btn-xl.active,
+body.pastel-aqua .open .dropdown-toggle.btn-xl {
+  background-color: #a5d1d1;
+  border: 0;
+  color: white;
+}
+body.pastel-aqua a.carousel-control,
+body.pastel-aqua a.btn-circle {
+  color: white;
+}
+body.pastel-aqua footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-aqua footer a:hover {
+  color: #ffffff;
+}
+body.pastel-aqua .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-turquoise .text-primary,
+body.pastel-turquoise ul.social-buttons li a,
+body.pastel-turquoise a,
+body.pastel-turquoise .navbar-inverse .nav li a:hover,
+body.pastel-turquoise .navbar-inverse .nav li a:focus,
+body.pastel-turquoise .navbar-default .nav li a:hover,
+body.pastel-turquoise .navbar-default .nav li a:focus {
+  color: #c7e2e2;
+}
+body.pastel-turquoise .navbar-toggle,
+body.pastel-turquoise .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-turquoise .navbar-default .navbar-nav > .active > a,
+body.pastel-turquoise #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-turquoise .timeline > li .timeline-image,
+body.pastel-turquoise .blog-col .blog-preview-img .caption {
+  background-color: #c7e2e2;
+}
+body.pastel-turquoise a:hover,
+body.pastel-turquoise a:focus,
+body.pastel-turquoise a:active,
+body.pastel-turquoise a.active {
+  color: #a5d1d1;
+}
+body.pastel-turquoise .btn-primary,
+body.pastel-turquoise .btn-xl {
+  background-color: #c7e2e2;
+  border: 0;
+  color: white;
+}
+body.pastel-turquoise .navbar-nav li.active a:hover,
+body.pastel-turquoise .navbar-toggle:hover,
+body.pastel-turquoise .navbar-toggle:focus,
+body.pastel-turquoise .btn-primary:hover,
+body.pastel-turquoise .btn-primary:focus,
+body.pastel-turquoise .btn-primary.active,
+body.pastel-turquoise .btn-xl:hover,
+body.pastel-turquoise .btn-xl:focus,
+body.pastel-turquoise .btn-xl:active,
+body.pastel-turquoise .btn-xl.active,
+body.pastel-turquoise .open .dropdown-toggle.btn-xl {
+  background-color: #a5d1d1;
+  border: 0;
+  color: white;
+}
+body.pastel-turquoise a.carousel-control,
+body.pastel-turquoise a.btn-circle {
+  color: white;
+}
+body.pastel-turquoise footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-turquoise footer a:hover {
+  color: #ffffff;
+}
+body.pastel-turquoise .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-blue .text-primary,
+body.pastel-blue ul.social-buttons li a,
+body.pastel-blue a,
+body.pastel-blue .navbar-inverse .nav li a:hover,
+body.pastel-blue .navbar-inverse .nav li a:focus,
+body.pastel-blue .navbar-default .nav li a:hover,
+body.pastel-blue .navbar-default .nav li a:focus {
+  color: #70d0ec;
+}
+body.pastel-blue .navbar-toggle,
+body.pastel-blue .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-blue .navbar-default .navbar-nav > .active > a,
+body.pastel-blue #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-blue .timeline > li .timeline-image,
+body.pastel-blue .blog-col .blog-preview-img .caption {
+  background-color: #70d0ec;
+}
+body.pastel-blue a:hover,
+body.pastel-blue a:focus,
+body.pastel-blue a:active,
+body.pastel-blue a.active {
+  color: #43c1e6;
+}
+body.pastel-blue .btn-primary,
+body.pastel-blue .btn-xl {
+  background-color: #70d0ec;
+  border: 0;
+  color: white;
+}
+body.pastel-blue .navbar-nav li.active a:hover,
+body.pastel-blue .navbar-toggle:hover,
+body.pastel-blue .navbar-toggle:focus,
+body.pastel-blue .btn-primary:hover,
+body.pastel-blue .btn-primary:focus,
+body.pastel-blue .btn-primary.active,
+body.pastel-blue .btn-xl:hover,
+body.pastel-blue .btn-xl:focus,
+body.pastel-blue .btn-xl:active,
+body.pastel-blue .btn-xl.active,
+body.pastel-blue .open .dropdown-toggle.btn-xl {
+  background-color: #43c1e6;
+  border: 0;
+  color: white;
+}
+body.pastel-blue a.carousel-control,
+body.pastel-blue a.btn-circle {
+  color: white;
+}
+body.pastel-blue footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-blue footer a:hover {
+  color: #ffffff;
+}
+body.pastel-blue .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-purple .text-primary,
+body.pastel-purple ul.social-buttons li a,
+body.pastel-purple a,
+body.pastel-purple .navbar-inverse .nav li a:hover,
+body.pastel-purple .navbar-inverse .nav li a:focus,
+body.pastel-purple .navbar-default .nav li a:hover,
+body.pastel-purple .navbar-default .nav li a:focus {
+  color: #c19bdf;
+}
+body.pastel-purple .navbar-toggle,
+body.pastel-purple .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-purple .navbar-default .navbar-nav > .active > a,
+body.pastel-purple #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-purple .timeline > li .timeline-image,
+body.pastel-purple .blog-col .blog-preview-img .caption {
+  background-color: #c19bdf;
+}
+body.pastel-purple a:hover,
+body.pastel-purple a:focus,
+body.pastel-purple a:active,
+body.pastel-purple a.active {
+  color: #a974d3;
+}
+body.pastel-purple .btn-primary,
+body.pastel-purple .btn-xl {
+  background-color: #c19bdf;
+  border: 0;
+  color: white;
+}
+body.pastel-purple .navbar-nav li.active a:hover,
+body.pastel-purple .navbar-toggle:hover,
+body.pastel-purple .navbar-toggle:focus,
+body.pastel-purple .btn-primary:hover,
+body.pastel-purple .btn-primary:focus,
+body.pastel-purple .btn-primary.active,
+body.pastel-purple .btn-xl:hover,
+body.pastel-purple .btn-xl:focus,
+body.pastel-purple .btn-xl:active,
+body.pastel-purple .btn-xl.active,
+body.pastel-purple .open .dropdown-toggle.btn-xl {
+  background-color: #a974d3;
+  border: 0;
+  color: white;
+}
+body.pastel-purple a.carousel-control,
+body.pastel-purple a.btn-circle {
+  color: white;
+}
+body.pastel-purple footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-purple footer a:hover {
+  color: #ffffff;
+}
+body.pastel-purple .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-pink .text-primary,
+body.pastel-pink ul.social-buttons li a,
+body.pastel-pink a,
+body.pastel-pink .navbar-inverse .nav li a:hover,
+body.pastel-pink .navbar-inverse .nav li a:focus,
+body.pastel-pink .navbar-default .nav li a:hover,
+body.pastel-pink .navbar-default .nav li a:focus {
+  color: #f4b3dc;
+}
+body.pastel-pink .navbar-toggle,
+body.pastel-pink .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-pink .navbar-default .navbar-nav > .active > a,
+body.pastel-pink #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-pink .timeline > li .timeline-image,
+body.pastel-pink .blog-col .blog-preview-img .caption {
+  background-color: #f4b3dc;
+}
+body.pastel-pink a:hover,
+body.pastel-pink a:focus,
+body.pastel-pink a:active,
+body.pastel-pink a.active {
+  color: #ee86c7;
+}
+body.pastel-pink .btn-primary,
+body.pastel-pink .btn-xl {
+  background-color: #f4b3dc;
+  border: 0;
+  color: white;
+}
+body.pastel-pink .navbar-nav li.active a:hover,
+body.pastel-pink .navbar-toggle:hover,
+body.pastel-pink .navbar-toggle:focus,
+body.pastel-pink .btn-primary:hover,
+body.pastel-pink .btn-primary:focus,
+body.pastel-pink .btn-primary.active,
+body.pastel-pink .btn-xl:hover,
+body.pastel-pink .btn-xl:focus,
+body.pastel-pink .btn-xl:active,
+body.pastel-pink .btn-xl.active,
+body.pastel-pink .open .dropdown-toggle.btn-xl {
+  background-color: #ee86c7;
+  border: 0;
+  color: white;
+}
+body.pastel-pink a.carousel-control,
+body.pastel-pink a.btn-circle {
+  color: white;
+}
+body.pastel-pink footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-pink footer a:hover {
+  color: #ffffff;
+}
+body.pastel-pink .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.pastel-gray .text-primary,
+body.pastel-gray ul.social-buttons li a,
+body.pastel-gray a,
+body.pastel-gray .navbar-inverse .nav li a:hover,
+body.pastel-gray .navbar-inverse .nav li a:focus,
+body.pastel-gray .navbar-default .nav li a:hover,
+body.pastel-gray .navbar-default .nav li a:focus {
+  color: #aea89e;
+}
+body.pastel-gray .navbar-toggle,
+body.pastel-gray .navbar-inverse .navbar-nav > li.active > a,
+body.pastel-gray .navbar-default .navbar-nav > .active > a,
+body.pastel-gray #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.pastel-gray .timeline > li .timeline-image,
+body.pastel-gray .blog-col .blog-preview-img .caption {
+  background-color: #aea89e;
+}
+body.pastel-gray a:hover,
+body.pastel-gray a:focus,
+body.pastel-gray a:active,
+body.pastel-gray a.active {
+  color: #978f82;
+}
+body.pastel-gray .btn-primary,
+body.pastel-gray .btn-xl {
+  background-color: #aea89e;
+  border: 0;
+  color: white;
+}
+body.pastel-gray .navbar-nav li.active a:hover,
+body.pastel-gray .navbar-toggle:hover,
+body.pastel-gray .navbar-toggle:focus,
+body.pastel-gray .btn-primary:hover,
+body.pastel-gray .btn-primary:focus,
+body.pastel-gray .btn-primary.active,
+body.pastel-gray .btn-xl:hover,
+body.pastel-gray .btn-xl:focus,
+body.pastel-gray .btn-xl:active,
+body.pastel-gray .btn-xl.active,
+body.pastel-gray .open .dropdown-toggle.btn-xl {
+  background-color: #978f82;
+  border: 0;
+  color: white;
+}
+body.pastel-gray a.carousel-control,
+body.pastel-gray a.btn-circle {
+  color: white;
+}
+body.pastel-gray footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.pastel-gray footer a:hover {
+  color: #ffffff;
+}
+body.pastel-gray .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-red .text-primary,
+body.metallic-red ul.social-buttons li a,
+body.metallic-red a,
+body.metallic-red .navbar-inverse .nav li a:hover,
+body.metallic-red .navbar-inverse .nav li a:focus,
+body.metallic-red .navbar-default .nav li a:hover,
+body.metallic-red .navbar-default .nav li a:focus {
+  color: #c84348;
+}
+body.metallic-red .navbar-toggle,
+body.metallic-red .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-red .navbar-default .navbar-nav > .active > a,
+body.metallic-red #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-red .timeline > li .timeline-image,
+body.metallic-red .blog-col .blog-preview-img .caption {
+  background-color: #c84348;
+}
+body.metallic-red a:hover,
+body.metallic-red a:focus,
+body.metallic-red a:active,
+body.metallic-red a.active {
+  color: #a73135;
+}
+body.metallic-red .btn-primary,
+body.metallic-red .btn-xl {
+  background-color: #c84348;
+  border: 0;
+  color: white;
+}
+body.metallic-red .navbar-nav li.active a:hover,
+body.metallic-red .navbar-toggle:hover,
+body.metallic-red .navbar-toggle:focus,
+body.metallic-red .btn-primary:hover,
+body.metallic-red .btn-primary:focus,
+body.metallic-red .btn-primary.active,
+body.metallic-red .btn-xl:hover,
+body.metallic-red .btn-xl:focus,
+body.metallic-red .btn-xl:active,
+body.metallic-red .btn-xl.active,
+body.metallic-red .open .dropdown-toggle.btn-xl {
+  background-color: #a73135;
+  border: 0;
+  color: white;
+}
+body.metallic-red a.carousel-control,
+body.metallic-red a.btn-circle {
+  color: white;
+}
+body.metallic-red footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-red footer a:hover {
+  color: #ffffff;
+}
+body.metallic-red .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-orange .text-primary,
+body.metallic-orange ul.social-buttons li a,
+body.metallic-orange a,
+body.metallic-orange .navbar-inverse .nav li a:hover,
+body.metallic-orange .navbar-inverse .nav li a:focus,
+body.metallic-orange .navbar-default .nav li a:hover,
+body.metallic-orange .navbar-default .nav li a:focus {
+  color: #cd6313;
+}
+body.metallic-orange .navbar-toggle,
+body.metallic-orange .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-orange .navbar-default .navbar-nav > .active > a,
+body.metallic-orange #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-orange .timeline > li .timeline-image,
+body.metallic-orange .blog-col .blog-preview-img .caption {
+  background-color: #cd6313;
+}
+body.metallic-orange a:hover,
+body.metallic-orange a:focus,
+body.metallic-orange a:active,
+body.metallic-orange a.active {
+  color: #9e4c0f;
+}
+body.metallic-orange .btn-primary,
+body.metallic-orange .btn-xl {
+  background-color: #cd6313;
+  border: 0;
+  color: white;
+}
+body.metallic-orange .navbar-nav li.active a:hover,
+body.metallic-orange .navbar-toggle:hover,
+body.metallic-orange .navbar-toggle:focus,
+body.metallic-orange .btn-primary:hover,
+body.metallic-orange .btn-primary:focus,
+body.metallic-orange .btn-primary.active,
+body.metallic-orange .btn-xl:hover,
+body.metallic-orange .btn-xl:focus,
+body.metallic-orange .btn-xl:active,
+body.metallic-orange .btn-xl.active,
+body.metallic-orange .open .dropdown-toggle.btn-xl {
+  background-color: #9e4c0f;
+  border: 0;
+  color: white;
+}
+body.metallic-orange a.carousel-control,
+body.metallic-orange a.btn-circle {
+  color: white;
+}
+body.metallic-orange footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-orange footer a:hover {
+  color: #ffffff;
+}
+body.metallic-orange .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-yellow .text-primary,
+body.metallic-yellow ul.social-buttons li a,
+body.metallic-yellow a,
+body.metallic-yellow .navbar-inverse .nav li a:hover,
+body.metallic-yellow .navbar-inverse .nav li a:focus,
+body.metallic-yellow .navbar-default .nav li a:hover,
+body.metallic-yellow .navbar-default .nav li a:focus {
+  color: #ca9501;
+}
+body.metallic-yellow .navbar-toggle,
+body.metallic-yellow .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-yellow .navbar-default .navbar-nav > .active > a,
+body.metallic-yellow #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-yellow .timeline > li .timeline-image,
+body.metallic-yellow .blog-col .blog-preview-img .caption {
+  background-color: #ca9501;
+}
+body.metallic-yellow a:hover,
+body.metallic-yellow a:focus,
+body.metallic-yellow a:active,
+body.metallic-yellow a.active {
+  color: #977001;
+}
+body.metallic-yellow .btn-primary,
+body.metallic-yellow .btn-xl {
+  background-color: #ca9501;
+  border: 0;
+  color: white;
+}
+body.metallic-yellow .navbar-nav li.active a:hover,
+body.metallic-yellow .navbar-toggle:hover,
+body.metallic-yellow .navbar-toggle:focus,
+body.metallic-yellow .btn-primary:hover,
+body.metallic-yellow .btn-primary:focus,
+body.metallic-yellow .btn-primary.active,
+body.metallic-yellow .btn-xl:hover,
+body.metallic-yellow .btn-xl:focus,
+body.metallic-yellow .btn-xl:active,
+body.metallic-yellow .btn-xl.active,
+body.metallic-yellow .open .dropdown-toggle.btn-xl {
+  background-color: #977001;
+  border: 0;
+  color: white;
+}
+body.metallic-yellow a.carousel-control,
+body.metallic-yellow a.btn-circle {
+  color: white;
+}
+body.metallic-yellow footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-yellow footer a:hover {
+  color: #ffffff;
+}
+body.metallic-yellow .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-green .text-primary,
+body.metallic-green ul.social-buttons li a,
+body.metallic-green a,
+body.metallic-green .navbar-inverse .nav li a:hover,
+body.metallic-green .navbar-inverse .nav li a:focus,
+body.metallic-green .navbar-default .nav li a:hover,
+body.metallic-green .navbar-default .nav li a:focus {
+  color: #208b4c;
+}
+body.metallic-green .navbar-toggle,
+body.metallic-green .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-green .navbar-default .navbar-nav > .active > a,
+body.metallic-green #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-green .timeline > li .timeline-image,
+body.metallic-green .blog-col .blog-preview-img .caption {
+  background-color: #208b4c;
+}
+body.metallic-green a:hover,
+body.metallic-green a:focus,
+body.metallic-green a:active,
+body.metallic-green a.active {
+  color: #166235;
+}
+body.metallic-green .btn-primary,
+body.metallic-green .btn-xl {
+  background-color: #208b4c;
+  border: 0;
+  color: white;
+}
+body.metallic-green .navbar-nav li.active a:hover,
+body.metallic-green .navbar-toggle:hover,
+body.metallic-green .navbar-toggle:focus,
+body.metallic-green .btn-primary:hover,
+body.metallic-green .btn-primary:focus,
+body.metallic-green .btn-primary.active,
+body.metallic-green .btn-xl:hover,
+body.metallic-green .btn-xl:focus,
+body.metallic-green .btn-xl:active,
+body.metallic-green .btn-xl.active,
+body.metallic-green .open .dropdown-toggle.btn-xl {
+  background-color: #166235;
+  border: 0;
+  color: white;
+}
+body.metallic-green a.carousel-control,
+body.metallic-green a.btn-circle {
+  color: white;
+}
+body.metallic-green footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-green footer a:hover {
+  color: #ffffff;
+}
+body.metallic-green .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-aqua .text-primary,
+body.metallic-aqua ul.social-buttons li a,
+body.metallic-aqua a,
+body.metallic-aqua .navbar-inverse .nav li a:hover,
+body.metallic-aqua .navbar-inverse .nav li a:focus,
+body.metallic-aqua .navbar-default .nav li a:hover,
+body.metallic-aqua .navbar-default .nav li a:focus {
+  color: #385d9e;
+}
+body.metallic-aqua .navbar-toggle,
+body.metallic-aqua .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-aqua .navbar-default .navbar-nav > .active > a,
+body.metallic-aqua #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-aqua .timeline > li .timeline-image,
+body.metallic-aqua .blog-col .blog-preview-img .caption {
+  background-color: #385d9e;
+}
+body.metallic-aqua a:hover,
+body.metallic-aqua a:focus,
+body.metallic-aqua a:active,
+body.metallic-aqua a.active {
+  color: #2b4778;
+}
+body.metallic-aqua .btn-primary,
+body.metallic-aqua .btn-xl {
+  background-color: #385d9e;
+  border: 0;
+  color: white;
+}
+body.metallic-aqua .navbar-nav li.active a:hover,
+body.metallic-aqua .navbar-toggle:hover,
+body.metallic-aqua .navbar-toggle:focus,
+body.metallic-aqua .btn-primary:hover,
+body.metallic-aqua .btn-primary:focus,
+body.metallic-aqua .btn-primary.active,
+body.metallic-aqua .btn-xl:hover,
+body.metallic-aqua .btn-xl:focus,
+body.metallic-aqua .btn-xl:active,
+body.metallic-aqua .btn-xl.active,
+body.metallic-aqua .open .dropdown-toggle.btn-xl {
+  background-color: #2b4778;
+  border: 0;
+  color: white;
+}
+body.metallic-aqua a.carousel-control,
+body.metallic-aqua a.btn-circle {
+  color: white;
+}
+body.metallic-aqua footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-aqua footer a:hover {
+  color: #ffffff;
+}
+body.metallic-aqua .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-turquoise .text-primary,
+body.metallic-turquoise ul.social-buttons li a,
+body.metallic-turquoise a,
+body.metallic-turquoise .navbar-inverse .nav li a:hover,
+body.metallic-turquoise .navbar-inverse .nav li a:focus,
+body.metallic-turquoise .navbar-default .nav li a:hover,
+body.metallic-turquoise .navbar-default .nav li a:focus {
+  color: #009d89;
+}
+body.metallic-turquoise .navbar-toggle,
+body.metallic-turquoise .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-turquoise .navbar-default .navbar-nav > .active > a,
+body.metallic-turquoise #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-turquoise .timeline > li .timeline-image,
+body.metallic-turquoise .blog-col .blog-preview-img .caption {
+  background-color: #009d89;
+}
+body.metallic-turquoise a:hover,
+body.metallic-turquoise a:focus,
+body.metallic-turquoise a:active,
+body.metallic-turquoise a.active {
+  color: #006a5c;
+}
+body.metallic-turquoise .btn-primary,
+body.metallic-turquoise .btn-xl {
+  background-color: #009d89;
+  border: 0;
+  color: white;
+}
+body.metallic-turquoise .navbar-nav li.active a:hover,
+body.metallic-turquoise .navbar-toggle:hover,
+body.metallic-turquoise .navbar-toggle:focus,
+body.metallic-turquoise .btn-primary:hover,
+body.metallic-turquoise .btn-primary:focus,
+body.metallic-turquoise .btn-primary.active,
+body.metallic-turquoise .btn-xl:hover,
+body.metallic-turquoise .btn-xl:focus,
+body.metallic-turquoise .btn-xl:active,
+body.metallic-turquoise .btn-xl.active,
+body.metallic-turquoise .open .dropdown-toggle.btn-xl {
+  background-color: #006a5c;
+  border: 0;
+  color: white;
+}
+body.metallic-turquoise a.carousel-control,
+body.metallic-turquoise a.btn-circle {
+  color: white;
+}
+body.metallic-turquoise footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-turquoise footer a:hover {
+  color: #ffffff;
+}
+body.metallic-turquoise .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-blue .text-primary,
+body.metallic-blue ul.social-buttons li a,
+body.metallic-blue a,
+body.metallic-blue .navbar-inverse .nav li a:hover,
+body.metallic-blue .navbar-inverse .nav li a:focus,
+body.metallic-blue .navbar-default .nav li a:hover,
+body.metallic-blue .navbar-default .nav li a:focus {
+  color: #0082b2;
+}
+body.metallic-blue .navbar-toggle,
+body.metallic-blue .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-blue .navbar-default .navbar-nav > .active > a,
+body.metallic-blue #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-blue .timeline > li .timeline-image,
+body.metallic-blue .blog-col .blog-preview-img .caption {
+  background-color: #0082b2;
+}
+body.metallic-blue a:hover,
+body.metallic-blue a:focus,
+body.metallic-blue a:active,
+body.metallic-blue a.active {
+  color: #005d7f;
+}
+body.metallic-blue .btn-primary,
+body.metallic-blue .btn-xl {
+  background-color: #0082b2;
+  border: 0;
+  color: white;
+}
+body.metallic-blue .navbar-nav li.active a:hover,
+body.metallic-blue .navbar-toggle:hover,
+body.metallic-blue .navbar-toggle:focus,
+body.metallic-blue .btn-primary:hover,
+body.metallic-blue .btn-primary:focus,
+body.metallic-blue .btn-primary.active,
+body.metallic-blue .btn-xl:hover,
+body.metallic-blue .btn-xl:focus,
+body.metallic-blue .btn-xl:active,
+body.metallic-blue .btn-xl.active,
+body.metallic-blue .open .dropdown-toggle.btn-xl {
+  background-color: #005d7f;
+  border: 0;
+  color: white;
+}
+body.metallic-blue a.carousel-control,
+body.metallic-blue a.btn-circle {
+  color: white;
+}
+body.metallic-blue footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-blue footer a:hover {
+  color: #ffffff;
+}
+body.metallic-blue .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-purple .text-primary,
+body.metallic-purple ul.social-buttons li a,
+body.metallic-purple a,
+body.metallic-purple .navbar-inverse .nav li a:hover,
+body.metallic-purple .navbar-inverse .nav li a:focus,
+body.metallic-purple .navbar-default .nav li a:hover,
+body.metallic-purple .navbar-default .nav li a:focus {
+  color: #803671;
+}
+body.metallic-purple .navbar-toggle,
+body.metallic-purple .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-purple .navbar-default .navbar-nav > .active > a,
+body.metallic-purple #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-purple .timeline > li .timeline-image,
+body.metallic-purple .blog-col .blog-preview-img .caption {
+  background-color: #803671;
+}
+body.metallic-purple a:hover,
+body.metallic-purple a:focus,
+body.metallic-purple a:active,
+body.metallic-purple a.active {
+  color: #5c2751;
+}
+body.metallic-purple .btn-primary,
+body.metallic-purple .btn-xl {
+  background-color: #803671;
+  border: 0;
+  color: white;
+}
+body.metallic-purple .navbar-nav li.active a:hover,
+body.metallic-purple .navbar-toggle:hover,
+body.metallic-purple .navbar-toggle:focus,
+body.metallic-purple .btn-primary:hover,
+body.metallic-purple .btn-primary:focus,
+body.metallic-purple .btn-primary.active,
+body.metallic-purple .btn-xl:hover,
+body.metallic-purple .btn-xl:focus,
+body.metallic-purple .btn-xl:active,
+body.metallic-purple .btn-xl.active,
+body.metallic-purple .open .dropdown-toggle.btn-xl {
+  background-color: #5c2751;
+  border: 0;
+  color: white;
+}
+body.metallic-purple a.carousel-control,
+body.metallic-purple a.btn-circle {
+  color: white;
+}
+body.metallic-purple footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-purple footer a:hover {
+  color: #ffffff;
+}
+body.metallic-purple .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-pink .text-primary,
+body.metallic-pink ul.social-buttons li a,
+body.metallic-pink a,
+body.metallic-pink .navbar-inverse .nav li a:hover,
+body.metallic-pink .navbar-inverse .nav li a:focus,
+body.metallic-pink .navbar-default .nav li a:hover,
+body.metallic-pink .navbar-default .nav li a:focus {
+  color: #b17e9c;
+}
+body.metallic-pink .navbar-toggle,
+body.metallic-pink .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-pink .navbar-default .navbar-nav > .active > a,
+body.metallic-pink #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-pink .timeline > li .timeline-image,
+body.metallic-pink .blog-col .blog-preview-img .caption {
+  background-color: #b17e9c;
+}
+body.metallic-pink a:hover,
+body.metallic-pink a:focus,
+body.metallic-pink a:active,
+body.metallic-pink a.active {
+  color: #9d5f83;
+}
+body.metallic-pink .btn-primary,
+body.metallic-pink .btn-xl {
+  background-color: #b17e9c;
+  border: 0;
+  color: white;
+}
+body.metallic-pink .navbar-nav li.active a:hover,
+body.metallic-pink .navbar-toggle:hover,
+body.metallic-pink .navbar-toggle:focus,
+body.metallic-pink .btn-primary:hover,
+body.metallic-pink .btn-primary:focus,
+body.metallic-pink .btn-primary.active,
+body.metallic-pink .btn-xl:hover,
+body.metallic-pink .btn-xl:focus,
+body.metallic-pink .btn-xl:active,
+body.metallic-pink .btn-xl.active,
+body.metallic-pink .open .dropdown-toggle.btn-xl {
+  background-color: #9d5f83;
+  border: 0;
+  color: white;
+}
+body.metallic-pink a.carousel-control,
+body.metallic-pink a.btn-circle {
+  color: white;
+}
+body.metallic-pink footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-pink footer a:hover {
+  color: #ffffff;
+}
+body.metallic-pink .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+body.metallic-gray .text-primary,
+body.metallic-gray ul.social-buttons li a,
+body.metallic-gray a,
+body.metallic-gray .navbar-inverse .nav li a:hover,
+body.metallic-gray .navbar-inverse .nav li a:focus,
+body.metallic-gray .navbar-default .nav li a:hover,
+body.metallic-gray .navbar-default .nav li a:focus {
+  color: #766d70;
+}
+body.metallic-gray .navbar-toggle,
+body.metallic-gray .navbar-inverse .navbar-nav > li.active > a,
+body.metallic-gray .navbar-default .navbar-nav > .active > a,
+body.metallic-gray #portfolio .portfolio-item .portfolio-link .portfolio-hover,
+body.metallic-gray .timeline > li .timeline-image,
+body.metallic-gray .blog-col .blog-preview-img .caption {
+  background-color: #766d70;
+}
+body.metallic-gray a:hover,
+body.metallic-gray a:focus,
+body.metallic-gray a:active,
+body.metallic-gray a.active {
+  color: #5b5557;
+}
+body.metallic-gray .btn-primary,
+body.metallic-gray .btn-xl {
+  background-color: #766d70;
+  border: 0;
+  color: white;
+}
+body.metallic-gray .navbar-nav li.active a:hover,
+body.metallic-gray .navbar-toggle:hover,
+body.metallic-gray .navbar-toggle:focus,
+body.metallic-gray .btn-primary:hover,
+body.metallic-gray .btn-primary:focus,
+body.metallic-gray .btn-primary.active,
+body.metallic-gray .btn-xl:hover,
+body.metallic-gray .btn-xl:focus,
+body.metallic-gray .btn-xl:active,
+body.metallic-gray .btn-xl.active,
+body.metallic-gray .open .dropdown-toggle.btn-xl {
+  background-color: #5b5557;
+  border: 0;
+  color: white;
+}
+body.metallic-gray a.carousel-control,
+body.metallic-gray a.btn-circle {
+  color: white;
+}
+body.metallic-gray footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.metallic-gray footer a:hover {
+  color: #ffffff;
+}
+body.metallic-gray .navbar-inverse .navbar-nav > .active > a {
+  color: white !important;
+}
+.buy {
+  text-align: center;
+}
+.buy .btn {
+  border: 3px solid black;
+  padding: 30px;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  margin-top: 25px;
+}
+@media (min-width: 767px) {
+  .blog-2 .blog-col {
+    margin-bottom: 30px;
+  }
+  .blog-preview-content {
+    margin-bottom: 30px;
+  }
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+  .intro {
+    height: 100%;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  header .intro-text .intro-lead-in {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  header .intro-text .intro-heading {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 50px;
+  }
+  section {
+    padding: 150px 0;
+  }
+  aside.cta-quote {
+    padding: 150px 0;
+    background-attachment: scroll;
+  }
+  aside.cta-quote span.quote {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline > li {
+    margin-bottom: 100px;
+    min-height: 100px;
+  }
+  .timeline > li .timeline-panel {
+    width: 41%;
+    float: left;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+  .timeline > li .timeline-image {
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 13px;
+    margin-top: 16px;
+    line-height: 18px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    text-align: left;
+    padding: 0 30px 20px 20px;
+  }
+  .navbar-default {
+    background-color: transparent;
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none;
+  }
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-default .navbar-nav > .active > a {
+    border-radius: 3px;
+  }
+  .navbar-default.navbar-shrink {
+    background-color: #222222;
+    padding: 10px 0;
+  }
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 992px) {
+  aside.cta-quote {
+    padding: 300px 0;
+  }
+  aside.cta-quote span.quote {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .pricing {
+    background-attachment: scroll;
+  }
+  .pricing .pricing-item {
+    margin-bottom: 0;
+  }
+  .pricing .pricing-item.featured-first {
+    margin-top: 15px;
+    margin-right: -15px;
+  }
+  .pricing .pricing-item.featured {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 45px 30px;
+  }
+  .pricing .pricing-item.featured-last {
+    margin-top: 15px;
+    margin-left: -15px;
+  }
+  .timeline > li {
+    min-height: 150px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px;
+  }
+  .timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 26px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .footer,
+  .pricing,
+  aside.cta-quote {
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px 100px;
+  }
+  .timeline > li .timeline-image {
+    width: 170px;
+    height: 170px;
+    margin-left: -85px;
+  }
+  .timeline > li .timeline-image h4 {
+    margin-top: 40px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 100px 20px 20px;
+  }
+}

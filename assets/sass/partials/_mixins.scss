@@ -1,0 +1,103 @@
+// Color theme mixin
+
+@mixin colorscheme($color) {
+        .text-primary, ul.social-buttons li a, a, .navbar-inverse .nav li a:hover, .navbar-inverse .nav li a:focus, .navbar-default .nav li a:hover, .navbar-default .nav li a:focus  {
+            color: $color;
+        }
+        .navbar-toggle, .navbar-inverse .navbar-nav > li.active > a, .navbar-default .navbar-nav > .active > a, #portfolio .portfolio-item .portfolio-link .portfolio-hover, .timeline > li .timeline-image, .blog-col .blog-preview-img .caption {
+            background-color: $color;
+        }
+        a:hover, a:focus, a:active, a.active {
+            color: darken($color,10%);
+        }
+        .btn-primary, .btn-xl {
+            background-color: $color;
+            border: 0;
+            color: white;
+        }
+        .navbar-nav li.active a:hover, .navbar-toggle:hover, .navbar-toggle:focus, .btn-primary:hover, .btn-primary:focus, .btn-primary.active, .btn-xl:hover, .btn-xl:focus, .btn-xl:active, .btn-xl.active, .open .dropdown-toggle.btn-xl {
+            background-color: darken($color,10%);
+            border: 0;
+            color: white;
+        }
+        a.carousel-control, a.btn-circle{
+            color: white;
+        }
+        footer a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        footer a:hover {
+            color: rgba(255, 255, 255, 1.0);
+        }
+        .navbar-inverse .navbar-nav > .active > a {
+        	color: white !important;
+        }
+}
+
+// Bootstrap Button Variant
+
+@mixin button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border: 0;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.open .dropdown-toggle {
+		color: $color;
+		background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+	}
+	&:active,
+	&.active,
+	&.open .dropdown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $background;
+			border: 0;
+		}
+	}
+
+	.badge {
+		color: $background;
+		background-color: $color;
+	}
+}
+
+// Background Features
+
+@mixin background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+// Font Selections
+
+@mixin serif-font() {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font() {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin body-font() {
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font() {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}

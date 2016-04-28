@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="jcthemes">
+
+    <title>JC Agency - Documentation</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/docs.min.css" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="css/prism.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://www.jcthemes.com/" target="_blank"><img src="img/jcthemes.png" alt="jcthemes"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">JC Agency Documentation</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 sidebar bg-lighter">
+                <div class="bs-docs-sidebar">
+                    <ul class="nav bs-docs-sidenav">
+                        <li class="active">
+                            <a href="#intro">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="#installation">Installation</a>
+                        </li>
+                        <li>
+                            <a href="#javascript">JavaScript plugins</a>
+                        </li>
+                        <li>
+                            <a href="#retina">Retina Images</a>
+                        </li>
+                        <li>
+                            <a href="#icons">Icons</a>
+                        </li>
+                        <li><a href="#animation">CSS Animation</a></li>
+                        <li>
+                            <a href="#navigation">Navigation</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#navigation1">Dark Navigation Bar</a>
+                                </li>
+                                <li>
+                                    <a href="#navigation2">Light Navigation Bar</a>
+                                </li>
+                                <li>
+                                    <a href="#logo">Logo Customization</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#header">Header</a></li>
+                        <li><a href="#service">Services Section</a></li>
+                        <li><a href="#portfolio">Portfolio Section</a></li>
+                        <li><a href="#testimonial">Testimonial Section</a></li>
+                        <li><a href="#pricing">Pricing Section</a></li>
+                        <li><a href="#about">About Section</a></li>
+                        <li><a href="#team">Team Section</a></li>
+                        <li><a href="#clients">Client Slider</a></li>
+                        <li><a href="#news">News Section</a></li>
+                        <li><a href="#contact">Contact Section</a></li>
+                        <li><a href="#googlemap">Google Map</a></li>
+                        <li><a href="#footers">Footer</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#credits">Credits</a></li>
+                        <li>
+                            <a href="#browsersupport">Browser support</a>
+                        </li>
+                        <li>
+                            <a href="#misc">Misc</a>
+                        </li>
+                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-3 col-md-8 col-md-offset-3 main">
+                <div id="intro">
+                    <img src="img/preview.png" alt="">
+                    <h2 class="page-header">Introduction</h2>
+                    <p>Thank you for choosing jcthemes and purchasing JC Agency, an easy to use Bootstrap theme for creating one page, smooth scrolling, dynamic websites.</p>
+
+                    <p>We <strong>do not</strong> cover basic Bootstrap framework componenets/features in this documentation. For specific Bootstrap framework markup and Bootstrap JavaScript plugin documentation, please check the official <a href="http://getbootstrap.com/components/">Bootstrap documentation</a>.</p>
+
+                    <p>Instead, we've focused on:</p>
+                    <ol>
+                        <li>how to setup and use the theme</li>
+                        <li>how to use and configure the included JavaScript plugins</li>
+                        <li>how to customise the theme to your needs</li>
+                     </ol></p>
+
+                    <div class="alert alert-info">
+                    <p><strong>Getting stuck?</strong></p>
+                    <p>Don't worry, we're here to help! Email <a href="mailto:support@jcthemes.com">support@jcthemes.com</a> with any support requests. You're eligble for <a href="#freesupport">free support*</a> if you provide us with proof of a purchase.</p>
+                    </div>
+                </div>
+
+    
+
+    
+                <div id="installation">
+                    <h2 class="page-header">Installation</h2>
+                    <p>JC Agency is supplied as a standalone bundle of HTML, CSS, LESS, JavaScript and webfont files. These have been coded to work on both a local or production server environment.</p>
+                    <p>Opening index.html in your browser will render the theme. The PHP-driven contact form does not work unless you upload the theme to a server, or setup a local server.</p>
+                    <img src="img/assets.png" alt="">
+                    <p>The file structure has been organised to maintain seperation between HTML pages, CSS files, and JavaScript plugins. These are contained in separate folders within an <strong>assets</strong> folder. You can change this structure, though it is recommended to keep it — the theme won't know where it's assets are unless you tell it otherwise!</p>
+                    
+                    <p>Adding your own HTML to our themes couldn't be easier. All our Bootstrap-based themes use the standard HTML markup of Bootstrap. If you want to add headings, paragraph text, buttons, tables, navigation, and so on, these all work as you would expect using the Bootstrap 3.2 framework.</p>
+
+                    <p>The theme includes a selection of heading styles, colors, and general theme styles to quickly alter the appearance of your website.</p>
+
+                </div>
+
+                <div id="javascript">
+                    <h2 class="page-header">JavaScript plugins</h2>
+                    <p>Several features of the theme have been implemented using JavaScript and jQuery.</p>
+                    <p>The JavaScript initialisation is included in the <strong>agency.js</strong> file, inside <strong>assets/js</strong>.</p>
+                    <h4>Bootstrap plugins</h4>
+                    <p>The entire collection of Bootstrap plugins is available for your use. These have been bundled into the <strong>bootstrap.min.js</strong> file.</p>
+                    <h4>Smooth Scrolling</h4>
+                    <p>This is used for the navigation links, to allow for smooth scrolling to sections on the page. You can alter the easing and scrolling speed.</p>
+            <pre><code class="language-markup">
+            $(function() {
+                $('a.page-scroll').bind('click', function(event) {
+                    var $anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500, 'easeInOutExpo');
+                    event.preventDefault();
+                });
+            });
+            </code></pre>
+                    <h4>Isotope</h4>
+                    <p>A third party plugin called Isotope is used to generate a Masonry grid, and flexible animated filtering for the Portfolio section of the theme. It is an extremely powerful and dynamic plugin, which is <a href="http://isotope.metafizzy.co/filtering.html">fully documented</a>.</p>
+            <pre>
+            <code class="language-markup">
+            // Initialise Isotope plugin for Portfolio Filtering
+
+            $(window).load(function() {
+                // init Isotope
+                var $container = $('.isotope').isotope({
+                    itemSelector: '.portfolio-item'
+                });
+                $('#filters').on('click', 'button', function() {
+                    var filterValue = $(this).attr('data-filter');
+                    $container.isotope({
+                        filter: filterValue
+                    });
+                });
+                // change is-checked class on buttons
+                $('#filters').each(function(i, buttonGroup) {
+                    var $buttonGroup = $(buttonGroup);
+                    $buttonGroup.on('click', 'button', function() {
+                        $buttonGroup.find('.active').removeClass('active');
+                        $(this).addClass('active');
+                    });
+                });
+            });
+            </code>
+            </pre>
+            <h4>owlCarousel</h4>
+            <p>The Testimonials section of the theme uses owlCarousel for a flexible slider. It is a <a href="http://owlgraphic.com/owlcarousel/">fully documented</a> and easy to use plugin.</p>
+            <pre><code class="language-markup">
+            // Initialise Testimonials carousel
+            $(".testimonials-carousel").owlCarousel({
+                singleItem: true,
+                navigation: false,
+                pagination: true,
+                autoHeight: true,
+                navigationText: [
+                    "<i class='fa fa-angle-left'></i>",
+                    "<i class='fa fa-angle-right'></i>"
+                ],
+                transitionStyle: "goDown"
+            });
+            </code></pre>
+                </div>
+
+                <div id="retina">
+                    <h2 class="page-header">Retina Images</h2>
+                    <p>Retina images are supported in this theme via the retina.js plugin. First, make sure the retina.js script is called for within your document. The plugin checks your server to see if there are any high-res versions of your picture available, which are identified by having the
+                        <code class="inline">@2x</code>modifier on the image.</p>
+                    <p>For example, if you have an image on your webpage that looks like this
+                        <code class="inline">&lt;img src="path/to/image.jpg"&gt;</code>then create another image called
+                        <code class="inline">image@2x.jpg</code>along with the original image and on certain devices the high-res image will be served in place of the normal image.</p>
+                    <p>For more details, visit the <a href="http://imulus.github.io/retinajs/">retina.js plugin documentation</a>.</p>
+                </div>
+
+                <div id="icons">
+                    <h2 class="page-header">Icons</h2>
+                    <p>A full icon set is available through <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, a set of scalable vector icons that can be easily customised via CSS. More than <a href="http://fortawesome.github.io/Font-Awesome/icons/">470 icons</a> are available in total!</p>
+                    <p>You can place Font Awesome icons just about anywhere using the CSS Prefix fa and the icon's name. Font Awesome is designed to be used with inline elements (we like the <i> tag for brevity, but using a <span> is more semantically correct).</p>
+                    
+                    <div><code class="inline"><i class="fa fa-camera-retro"></i> fa-camera-retro</code></div>
+
+                    <div><i class="fa fa-camera-retro"></i> fa-camera-retro</div>
+
+                    <div class="alert alert-info"><p>If you change the font-size of the icon's container, the icon gets bigger. Same things goes for color, drop shadow, and anything else that gets inherited using CSS.</p></div>
+                </div>
+
+                <div id="animation">
+                    <h2 class="page-header">CSS Animation</h2>
+                    <p><a href="https://daneden.github.io/animate.css/">Animate.css</a> is included by default, giving you access to a range of CSS animations that you can apply to any element in the theme.</p>
+                    <p>Dynamically add animations using jQuery with ease:</p>
+                    <pre><code class="language-markup">$('#yourElement').addClass('animated bounceOutLeft');</code></pre>
+                    <p>You can also detect when an animation ends:</p>
+                    <pre><code class="language-markup">$('#yourElement').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);</code></pre>
+                    <h4>Changing animation duration</h4>
+                    <p>You can change the duration of your animations, add a delay or change the number of times that it plays:</p>
+                    <pre><code class="language-markup">#yourElement {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}</code></pre>
+                    <h4>Animation on scroll</h4>
+                    <p>JC Agency expands the functionality of Animate.css with additional JavaScript which animates specific elements when they are first scrolled to. If you scroll through the JC Agency theme, you'll see what we mean!</p>
+                    <h5>JavaScript:</h5>
+<pre><code class="language-markup">&lt;!-- ViewPortChecker plugin (used for animated sections) --&gt;
+&lt;script src="assets/js/jquery.viewportchecker.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="language-markup">
+$('.service-item').removeClass("hidden").viewportChecker({
+    classToAdd: 'visible animated zoomIn',offset: 100
+});
+</code></pre>
+
+<div class="bs-callout bs-callout-danger" id="callout-carousel-transitions">
+    <h4>CSS animations not supported in Internet Explorer 9</h4>
+    <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 9 doesn't support the necessary CSS properties. Thus, there are no slide transition animations when using Internet Explorer 9. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+  </div>
+
+                </div>
+
+                <div id="navigation">
+                    <h2 class="page-header">Navigation</h2>
+
+                    <p>There are two navigation options to choose from when using JC Agency: a dark background and light background fixed header. They are similar in look and feel, and share many components.</p>
+
+                    <!-- Navigation Option 1: Fixed with Dark Background -->
+                    <h4 id="navigation1" class="option">Option 1: Fixed (Dark Background)</h4>
+                    <h4>Example:</h4>
+                    <img src="img/dark_nav_example.png" alt="">
+                    <h4>HTML:</h4>
+<pre>
+<code class="language-markup">&lt;!-- Navigation --&gt;  
+&lt;nav class="navbar navbar-default navbar-fixed-top"&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- Brand and toggle are grouped for better mobile display --&gt;
+        &lt;div class="navbar-header page-scroll"&gt;
+            &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                &lt;span class="sr-only">Toggle navigation&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class="navbar-brand page-scroll" href="#page-top"&gt;jcagency&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Collect the nav links, forms, and other content for toggling -->
+        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#portfolio"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#pricing"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#blog"&gt;News&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- /.navbar-collapse --&gt;
+    &lt;/div&gt;
+    &lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;</code>
+</pre>
+
+
+                   <!-- Navigation Option 1: Fixed with Dark Background -->
+                    <h4 id="navigation2" class="option">Option 2: Fixed (Light Background)</h4>
+                    <h4>Example:</h4>
+                    <img src="img/light_nav_example.png" alt="">
+                    <h4>HTML:</h4>
+<pre>
+<code class="language-markup">&lt;!-- Navigation --&gt;  
+&lt;nav class="navbar navbar-inverse navbar-fixed-top"&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- Brand and toggle are grouped for better mobile display --&gt;
+        &lt;div class="navbar-header page-scroll"&gt;
+            &lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt;
+                &lt;span class="sr-only">Toggle navigation&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+                &lt;span class="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;a class="navbar-brand page-scroll" href="#page-top"&gt;jcagency&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Collect the nav links, forms, and other content for toggling -->
+        &lt;div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul class="nav navbar-nav navbar-right"&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#portfolio"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#pricing"&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#blog"&gt;News&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a class="page-scroll" href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- /.navbar-collapse --&gt;
+    &lt;/div&gt;
+    &lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;</code>
+</pre>
+
+                    <h4>Usage:</h4>
+                    <p>First make sure that your body tag has a page-top id. It should look like this:
+                        <code class="inline">&lt;body id="page-top"&gt;</code>. This will make sure that when a user clicks on the logo it will bring them back to the top of the page.</p>
+                    <p>Each link should be within a
+                        <code class="inline">&lt;li class="page-scroll"&gt;</code>. This will activate the smooth scrolling jQuery and will bring you to the target section.</p>
+                    <p>Each link within the navigation should target a section ID. For example, if one of your menu items is
+                        <code class="inline">&lt;a href="#about"&gt;About&lt;/a&gt;</code>then there should be a corresponding
+                        <code class="inline">&lt;section id="about"&gt;</code>somewhere within your HTML.</p>
+                    <!-- <p>
+                        <span class="text-danger">
+                            <strong>Note: DO NOT DELETE the first menu item within the list with the
+                                <code class="inline">hidden</code>class. This ensures that the active class will be removed from the first link when scrolled up past that section.</strong>
+                        </span>
+                    </p> -->
+                    <h4>Setting the Logo Image:</h4>
+                    <p>There are two places you will need to set the logo image. The first
+                        <code class="inline">&lt;span class="logo"&gt;&lt;img src="path/to/logo.png" alt=""&gt;&lt;/span&gt;</code>determines the logo image when the menu bar is expanded. The second
+                        <code class="inline">&lt;span class="logo-collapse"&gt;&lt;img src="path/to/collapsed-logo.png" alt=""&gt;&lt;/span&gt;</code>determines the logo image when the menu bar is collapsed after scrolling. If you want the logos to be the same, you can delete the second line of code. If you want them to be different however, the option is there.</p>
+                    <div class="alert alert-danger">For the scrolling to work, make sure that your links have a parent class of
+                        <code class="inline">.page-scroll</code>like in the example code. Also, make sure that your link targets match a section ID somewhere on your page.</div>
+
+                    <h3 id="logo">Customizing the Logo</h3>
+                    <p>The logo in the theme </p>
+                    <p>In order to customize the logo, we recommend creating a logo with a transparent background that has a <strong>height of 50px</strong>. The logo in the sample is white, but if your page background is lighter in color, your logo can be darker.</p>
+                    <p>Also, you will want to create a high-res version of your logo, or the same logo but double the size, for mobile devices.</p>
+                    <p>For example, the sample logo provided in the template is named <code class="inline">logo.png</code> but it also has a high-res version named <code class="inline">logo@2x.png</code> that is served on mobile devices. The retina.js plugin is what makes this happen. With your logo, simply use the same @2x condition for your high-res version and the plugin will do the rest!</p>
+
+                </div>
+
+                <div id="header">
+                    <h2 class="page-header">Header</h2>
+
+                    <p>The top of the page features a full screen image slider, based on Bootstrap Carousel.js. This provides simple yet flexible image slider capabilities, including a bullet navigation and arrow navigation. The slider is also fully responsive.</p>
+
+                    <p>The default implementation uses a combination of background images (implemented using inline styles on each slide), and heading text inside <code class="inline">&lt;div&gt;</code> slides. You can have as many slides as you want, but you will need to manually edit the Indicators section to correspond with the number of slides you choose to have.</p>
+
+                    <h4>Example:</h4>
+                    <img style="max-width:450px;margin: 0;" src="img/header_example.jpg" alt="">
+
+                    <h4>JavaScript:</h4>
+                    <p>The Bootstrap JavaScript must be loaded on your page:</p>
+<pre><code class="language-markup">&lt;!-- Bootstrap Core JavaScript --&gt;
+&lt;script src="assets/js/bootstrap.min.js"&gt;&lt;/script&gt;</code></pre>
+                    <p>The following code adjusts the <code class="inline">#hero-carousel</code> container height to the <code class="inline">$(window)</code> height on page load.</p>
+<pre><code class="language-markup">// Adjust .intro section height to same as window height
+var wH = $(window).height();
+$('#hero-carousel').css("height", wH);</code></pre>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">    &lt;!-- Header --&gt;
+    &lt;header class="intro"&gt;
+        &lt;div id="hero-carousel" class="carousel slide" data-ride="carousel"&gt;
+          &lt;!-- Indicators --&gt;
+          &lt;ol class="carousel-indicators"&gt;
+            &lt;li data-target="#hero-carousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+            &lt;li data-target="#hero-carousel" data-slide-to="1"&gt;&lt;/li&gt;
+            &lt;li data-target="#hero-carousel" data-slide-to="2"&gt;&lt;/li&gt;
+          &lt;/ol&gt;
+
+          &lt;!-- Wrapper for slides --&gt;
+          &lt;div class="carousel-inner"&gt;
+            &lt;!-- Start slide --&gt;
+            &lt;div class="item active" style="background-image: url('assets/img/header-bg.jpg');"&gt;
+              &lt;div class="row"&gt;
+                    &lt;div class="col-md-8 col-md-offset-2"&gt;
+                        &lt;div class="intro-text animated fadeIn"&gt;
+                            &lt;div class="intro-lead-in"&gt;We're not just an agency&lt;/div&gt;
+                            &lt;div class="intro-heading"&gt;We're digital experts&lt;/div&gt;
+                            &lt;a href="#services" class="page-scroll btn btn-xl"&gt;Tell Me More&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;a href="#services" class="btn btn-circle page-scroll"&gt;
+                            &lt;i class="fa fa-angle-double-down animated"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- End slide --&gt;
+
+            &lt;!-- Start slide --&gt;
+            &lt;div class="item" style="background-image: url('assets/img/header-bg-2.jpg');"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-8 col-md-offset-2"&gt;
+                        &lt;div class="intro-text animated fadeInLeft"&gt;
+                            &lt;div class="intro-lead-in"&gt;We'll listen to you&lt;/div&gt;
+                            &lt;div class="intro-heading"&gt;and create things&lt;/div&gt;
+                            &lt;a href="#portfolio" class="page-scroll btn btn-xl"&gt;Show Me&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;a href="#services" class="btn btn-circle page-scroll"&gt;
+                            &lt;i class="fa fa-angle-double-down animated"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- End slide --&gt;
+
+            &lt;!-- Start slide --&gt;
+            &lt;div class="item" style="background-image: url('assets/img/header-bg-3.jpg');"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-8 col-md-offset-2"&gt;
+                        &lt;div class="intro-text animated fadeInRight"&gt;
+                            &lt;div class="intro-lead-in"&gt;We'll amaze you&lt;/div&gt;
+                            &lt;div class="intro-heading"&gt;and impress you&lt;/div&gt;
+                            &lt;a href="#contact" class="page-scroll btn btn-xl"&gt;Get in touch today&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;a href="#services" class="btn btn-circle page-scroll"&gt;
+                            &lt;i class="fa fa-angle-double-down animated"&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!-- End slide --&gt;
+
+          &lt;!-- Controls --&gt;
+          &lt;a class="left carousel-control" href="#hero-carousel" role="button" data-slide="prev"&gt;
+            &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a class="right carousel-control" href="#hero-carousel" role="button" data-slide="next"&gt;
+            &lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;!-- End controls --&gt;
+
+        &lt;/div&gt;&lt;!-- /#hero-carousel --&gt;
+    &lt;/header&gt;&lt;!-- /.intro --&gt;
+</code></pre>
+
+<h4>Usage</h4>
+<p>Slides are contained within <code class="inline">.item</code> divs, which are contained within <code class="inline">.carousel-inner</code> wrapper.</p>
+<p>The slider is initialised using a HTML5 data attribute, <code class="inline">data-ride="carousel"</code> on the main <code class="inline">#hero-carousel</code> div.</p>
+<p>Inline styles on each <code class="inline">.item</code> div define the background images for each slide. Alternatively, you can include an <code class="inline">img</code> tag within each slide.</p>
+<p>Please see the official <a href="http://getbootstrap.com/javascript/#carousel">Bootstrap Carousel documentation</a> for more information.</p>
+
+<div class="bs-callout bs-callout-danger" id="callout-carousel-transitions">
+    <h4>CSS animations not supported in Internet Explorer 9</h4>
+    <p>Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 9 doesn't support the necessary CSS properties. Thus, there are no slide transition animations when using Internet Explorer 9. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+  </div>
+
+                </div>
+
+                <div id="service">
+                    <h2 class="page-header">Services Section</h2>
+
+                    <p>A simple three column layout is provided for you to feature key selling points or services. Each service is containe within a <code class="inline">&lt;div class="service-item"&gt;</code> block.</p>
+
+                    <h4>HTML:</h4>
+
+<pre><code class="language-markup">&lt;!-- Services Section --&gt;
+&lt;section id="services"&gt;
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-12 text-center"&gt;
+            &lt;h2 class="section-heading"&gt;Services&lt;/h2&gt;
+            &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row text-center"&gt;
+        &lt;div class="service-item col-md-4"&gt;
+            &lt;span class="fa-stack fa-4x"&gt;
+                &lt;i class="fa fa-circle fa-stack-2x text-primary"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-shopping-cart fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;h4 class="service-heading"&gt;E-Commerce&lt;/h4&gt;
+            &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.service-item --&gt;
+        &lt;div class="service-item col-md-4"&gt;
+            &lt;span class="fa-stack fa-4x"&gt;
+                &lt;i class="fa fa-circle fa-stack-2x text-primary"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-laptop fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;h4 class="service-heading"&gt;Responsive Design&lt;/h4&gt;
+            &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.service-item --&gt;
+        &lt;div class="service-item col-md-4"&gt;
+            &lt;span class="fa-stack fa-4x"&gt;
+                &lt;i class="fa fa-circle fa-stack-2x text-primary"&gt;&lt;/i&gt;
+                &lt;i class="fa fa-lock fa-stack-1x fa-inverse"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;h4 class="service-heading"&gt;Web Security&lt;/h4&gt;
+            &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.&lt;/p&gt;
+        &lt;/div&gt;&lt;!-- /.service-item --&gt;
+    &lt;/div&gt;&lt;!-- /.row --&gt;
+&lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/section&gt;</code></pre>
+
+    <h4>Usage</h4>
+    <p>To change the layout of the Services section, you can modify the column classes (using the standard Bootstrap Grid classes). You can also add additional services by adding more <code class="inline">&lt;div class="service-item"&gt;</code> blocks. If you add another 3 x <code class="inline">&lt;div class="service-item"&gt;</code> block immediately after the existing 3, you will see another row of services appear.</p>
+
+    <h4>Example of the Services section with 6 blocks</h4>
+    <img src="img/services_expanded.jpg" alt="">
+
+    <h4>Icon animation</h4>
+    <p>The icons for each service animate on hover. This is implemented using a few lines of CSS, as below:</p>
+<pre><code class="language-markup">.service-item .fa-inverse {
+    -webkit-transform: scale(1);
+    transform: rotate(0);
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.service-item:hover .fa-inverse {
+    -webkit-transform:scale(1.5);
+    transform:rotate(360deg);
+    -webkit-transition:all 1s ease-out;
+    transition:all 1s ease-out;
+}</code></pre>
+                </div>
+                <div id="portfolio">
+                    <h2 class="page-header">Portfolio Section</h2>
+
+                    <p>The Portfolio section allows you to display your work to the world. Using the Masonry and Isotope plugins, this is a very flexible section of the theme.</p>
+
+                    <p>Portfolio work can be filtered by category, e.g. website, or print.</p>
+
+                    <p>Each portfolio item has a corresponding pop-up section, allowing you to showcase as much information as possible about your work.</p>
+
+    <h4>JavaScript</h4>
+    <p>The portfolio section uses Isotope for filtering, and Masonry for the layout (resize the window  to experience the animated layout!).</p>
+    <pre><code class="language-markup"></code></pre>
+
+                    <h4>HTML (main section):</h4>
+<pre><code class="language-markup">&lt;!-- Portfolio Grid Section --&gt;
+&lt;section id="portfolio" class="bg-light-gray hidden"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-12 text-center"&gt;
+                &lt;h2 class="section-heading"&gt;Our Work&lt;/h2&gt;
+                &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-12 text-center"&gt;
+                &lt;ul class="list-inline" id="filters"&gt;
+                    &lt;li&gt;&lt;button data-filter="*" type="button" class="btn btn-primary btn-square btn-raised active"&gt;All&lt;/button&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;button data-filter=".web" type="button" class="btn btn-primary btn-square btn-raised"&gt;Website&lt;/button&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;button data-filter=".graphic" type="button" class="btn btn-primary btn-square btn-raised"&gt;Graphic&lt;/button&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;button data-filter=".print" type="button" class="btn btn-primary btn-square btn-raised"&gt;Print&lt;/button&gt;&lt;/li&gt;
+                &lt;/ul&gt;&lt;!-- /ul --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="isotope"&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item graphic"&gt;
+                &lt;a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/roundicons.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Round Icons&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Graphic Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item web"&gt;
+                &lt;a href="#portfolioModal2" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/startup-framework.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Startup Framework&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Website Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item web"&gt;
+                &lt;a href="#portfolioModal3" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/treehouse.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Treehouse&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Website Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item print"&gt;
+                &lt;a href="#portfolioModal4" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/golden.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Golden&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Website Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item graphic"&gt;
+                &lt;a href="#portfolioModal5" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/escape.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Escape&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Website Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+            &lt;div class="col-md-4 col-sm-6 portfolio-item print"&gt;
+                &lt;a href="#portfolioModal6" class="portfolio-link" data-toggle="modal"&gt;
+                    &lt;div class="portfolio-hover"&gt;
+                        &lt;div class="portfolio-hover-content"&gt;
+                            &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="assets/img/portfolio/dreams.png" class="img-responsive" alt=""&gt;
+                &lt;/a&gt;
+                &lt;div class="portfolio-caption"&gt;
+                    &lt;h4&gt;Dreams&lt;/h4&gt;
+                    &lt;p class="text-muted"&gt;Website Design&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.portfolio-item --&gt;
+        &lt;/div&gt;&lt;!-- /.isotope --&gt;
+    &lt;/div&gt;&lt;!-- /.row --&gt;
+&lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/section&gt;</code></pre>
+
+<h4>HTML (pop-up section):</h4>
+
+<pre><code class="language-markup">&lt;!-- Portfolio Modal 1 --&gt;
+&lt;div class="popup-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+    &lt;div class="modal-content"&gt;
+        &lt;div class="close-modal" data-dismiss="modal"&gt;
+            &lt;div class="lr"&gt;
+                &lt;div class="rl"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-8 col-lg-offset-2"&gt;
+                    &lt;div class="modal-body"&gt;
+                        &lt;!-- Project Details Go Here --&gt;
+                        &lt;h2&gt;Project Name&lt;/h2&gt;
+                        &lt;p class="item-intro text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/p&gt;
+                        &lt;img class="img-responsive" src="assets/img/portfolio/roundicons-free.png" alt=""&gt;
+                        &lt;p&gt;Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;Want these icons in this portfolio item sample?&lt;/strong&gt;You can download 60 of them for free, courtesy of &lt;a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"&gt;RoundIcons.com&lt;/a&gt;, or you can purchase the 1500 icon set &lt;a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc"&gt;here&lt;/a&gt;.&lt;/p&gt;
+                        &lt;ul class="list-inline"&gt;
+                            &lt;li&gt;Date: July 2014&lt;/li&gt;
+                            &lt;li&gt;Client: Round Icons&lt;/li&gt;
+                            &lt;li&gt;Category: Graphic Design&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt; Close Project&lt;/button&gt;
+                    &lt;/div&gt;&lt;!-- /.modal-body --&gt;
+                &lt;/div&gt;&lt;!-- /.col-gl-8 --&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+&lt;/div&gt;&lt;!-- /.popup-modal --&gt;</code></pre>
+
+                    <h4>Usage</h4>
+
+
+                </div>
+                <div id="pricing">
+                    <h2 class="page-header">Pricing Section</h2>
+
+                    <p>The theme includes a pricing table which you can use to show off your product pricing plans. The plan items are easy to edit as they are formatted in a simple list.</p>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- Pricing Table Section --&gt;   
+&lt;section id="pricing" class="pricing" style="background-image: url('assets/img/pricing-bg.jpg')"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row text-center"&gt;
+                &lt;div class="col-lg-12"&gt;
+                    &lt;h2&gt;Pricing&lt;/h2&gt;
+                    &lt;hr class="colored"&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, quae, laborum, voluptate delectus odio doloremque error porro obcaecati nemo animi ducimus quaerat nostrum? Ab molestiae eaque et atque architecto reiciendis.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row content-row"&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-item featured-first"&gt;
+                        &lt;h3&gt;Basic&lt;/h3&gt;
+                        &lt;hr class="colored"&gt;
+                        &lt;div class="price"&gt;&lt;span class="number"&gt;&lt;sup&gt;$&lt;/sup&gt;15&lt;/span&gt; / month&lt;/div&gt;
+                        &lt;ul class="list-group"&gt;
+                            &lt;li class="list-group-item"&gt;30 Users&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;3 Pages&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Reports&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;3,000&lt;/strong&gt; Entires per Month&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;500 MB&lt;/strong&gt; Storage&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Support&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#" class="btn btn-primary btn-outline-dark"&gt;Sign Up&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.pricing-item --&gt;
+                &lt;/div&gt;&lt;!-- /.col-md-4 --&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-item featured"&gt;
+                        &lt;h3&gt;Plus&lt;/h3&gt;
+                        &lt;hr class="colored"&gt;
+                        &lt;div class="price"&gt;&lt;span class="number"&gt;&lt;sup&gt;$&lt;/sup&gt;50&lt;/span&gt; / month&lt;/div&gt;
+                        &lt;ul class="list-group"&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;60&lt;/strong&gt; Users&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;15 Pages&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Reports&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;3,000&lt;/strong&gt; Entires per Month&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;1 GB&lt;/strong&gt; Storage&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Support&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#" class="btn btn-primary btn-outline-dark"&gt;Sign Up&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.pricing-item --&gt;
+                &lt;/div&gt;&lt;!-- /.col-md-4 --&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;div class="pricing-item featured-last"&gt;
+                        &lt;h3&gt;Premium&lt;/h3&gt;
+                        &lt;hr class="colored"&gt;
+                        &lt;div class="price"&gt;&lt;span class="number"&gt;&lt;sup&gt;$&lt;/sup&gt;150&lt;/span&gt; / month&lt;/div&gt;
+                        &lt;ul class="list-group"&gt;
+                            &lt;li class="list-group-item"&gt;120 Users&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;60 Pages&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Reports&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;3,000&lt;/strong&gt; Entires per Month&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;&lt;strong&gt;10 GB&lt;/strong&gt;  Storage&lt;/li&gt;
+                            &lt;li class="list-group-item"&gt;Unlimited Support&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;a href="#" class="btn btn-primary btn-outline-dark"&gt;Sign Up&lt;/a&gt;
+                    &lt;/div&gt;&lt;!-- /.pricing-item --&gt;
+                &lt;/div&gt;&lt;!-- /.col-md-4 --&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/section&gt;</code></pre>
+
+                </div>
+
+
+
+                <div id="testimonial">
+                    <h2 class="page-header">Testimonial Section</h2>
+
+                    <p>Add testimonials easily with the Testimonial Section. </p>
+
+                    <h4>JavaScript</h4>
+                    <p>The following JavaScript code is contained inside the <strong>jsagency.js</strong> file and is required for the Testimonials carousel to work.</p>
+<pre><code class="language-markup">// Initialise Testimonials carousel
+$(".testimonials-carousel").owlCarousel({
+    singleItem: true,
+    navigation: false,
+    pagination: true,
+    autoHeight: true,
+    navigationText: [
+        "&lt;i class='fa fa-angle-left'&gt;&lt;/i&gt;",
+        "&lt;i class='fa fa-angle-right'&gt;&lt;/i&gt;"
+    ],
+    transitionStyle: "goDown"
+});
+</code></pre>
+
+                    <h4>HTML:</h4>
+                    <p>Each testimonial is contained inside a <code class="inline">.item</code> div element. To add more testimonials, simply add more <code class="inline">.item</code> div blocks.</p>
+<pre><code class="language-markup">&lt;!-- Testimonial Section --&gt;    
+    &lt;section class="testimonials"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-10 col-lg-offset-1"&gt;
+                    &lt;div class="testimonials-carousel owl-carousel owl-theme hidden" style="opacity: 1; display: block;"&gt;
+                        &lt;div class="item"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-lg-12"&gt;
+                                    &lt;h4&gt;"JC Agency are great to work with."&lt;/h4&gt;
+                                    &lt;hr class="colored"&gt;
+                                    &lt;p class="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, temporibus, laborum, dignissimos doloremque corporis alias nostrum recusandae culpa id quisquam harum impedit sed sunt non obcaecati vero ipsam aut fugit?&lt;/p&gt;
+                                    &lt;div class="testimonial-info"&gt;
+                                        &lt;div class="testimonial-author"&gt;
+                                            &lt;span class="name"&gt;John Doe&lt;/span&gt;
+                                            &lt;p class="small"&gt;CEO of John Doe Corporation&lt;/p&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;&lt;!-- /.testimonial-info --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- /.item --&gt;
+                        &lt;div class="item"&gt;
+                            &lt;div class="row"&gt;
+                                &lt;div class="col-lg-12"&gt;
+                                    &lt;h4&gt;"We will be working with JC again."&lt;/h4&gt;
+                                    &lt;hr class="colored"&gt;
+                                    &lt;p class="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, temporibus, laborum, dignissimos doloremque corporis alias nostrum recusandae culpa id quisquam harum impedit sed sunt non obcaecati vero ipsam aut fugit?&lt;/p&gt;
+                                    &lt;div class="testimonial-info"&gt;
+                                        &lt;div class="testimonial-author"&gt;
+                                            &lt;span class="name"&gt;Jane Doe&lt;/span&gt;
+                                            &lt;p class="small"&gt;CEO of Jane Doe Inc&lt;/p&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;&lt;!-- /.testimonial-info --&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- /.item --&gt;
+                    &lt;/div&gt;&lt;!-- /.testimonial-carousel --&gt;
+                &lt;/div&gt;&lt;!-- /.col-lg-10 --&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/section&gt;</code></pre>
+
+                </div>
+
+
+  <div id="about">
+                    <h2 class="page-header">About Section</h2>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- About Section --&gt;
+    &lt;section id="about"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-12 text-center"&gt;
+                    &lt;h2 class="section-heading"&gt;About&lt;/h2&gt;
+                    &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-12"&gt;
+                    &lt;ul class="timeline"&gt;
+                        &lt;li class="hidden"&gt;
+                            &lt;div class="timeline-image"&gt;
+                                &lt;img class="img-circle img-responsive" src="assets/img/about/1.jpg" alt=""&gt;
+                            &lt;/div&gt;
+                            &lt;div class="timeline-panel"&gt;
+                                &lt;div class="timeline-heading"&gt;
+                                    &lt;h4&gt;2009-2011&lt;/h4&gt;
+                                    &lt;h4 class="subheading"&gt;Our Humble Beginnings&lt;/h4&gt;
+                                &lt;/div&gt;
+                                &lt;div class="timeline-body"&gt;
+                                    &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;&lt;!-- /timeline item --&gt;
+                        &lt;li class="timeline-inverted hidden"&gt;
+                            &lt;div class="timeline-image"&gt;
+                                &lt;img class="img-circle img-responsive" src="assets/img/about/2.jpg" alt=""&gt;
+                            &lt;/div&gt;
+                            &lt;div class="timeline-panel"&gt;
+                                &lt;div class="timeline-heading"&gt;
+                                    &lt;h4&gt;March 2011&lt;/h4&gt;
+                                    &lt;h4 class="subheading"&gt;An Agency is Born&lt;/h4&gt;
+                                &lt;/div&gt;
+                                &lt;div class="timeline-body"&gt;
+                                    &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;&lt;!-- /timeline item --&gt;
+                        &lt;li class="hidden"&gt;
+                            &lt;div class="timeline-image"&gt;
+                                &lt;img class="img-circle img-responsive" src="assets/img/about/3.jpg" alt=""&gt;
+                            &lt;/div&gt;
+                            &lt;div class="timeline-panel"&gt;
+                                &lt;div class="timeline-heading"&gt;
+                                    &lt;h4&gt;December 2012&lt;/h4&gt;
+                                    &lt;h4 class="subheading"&gt;Transition to Full Service&lt;/h4&gt;
+                                &lt;/div&gt;
+                                &lt;div class="timeline-body"&gt;
+                                    &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;&lt;!-- /timeline item --&gt;
+                        &lt;li class="timeline-inverted hidden"&gt;
+                            &lt;div class="timeline-image"&gt;
+                                &lt;img class="img-circle img-responsive" src="assets/img/about/4.jpg" alt=""&gt;
+                            &lt;/div&gt;
+                            &lt;div class="timeline-panel"&gt;
+                                &lt;div class="timeline-heading"&gt;
+                                    &lt;h4&gt;July 2014&lt;/h4&gt;
+                                    &lt;h4 class="subheading"&gt;Phase Two Expansion&lt;/h4&gt;
+                                &lt;/div&gt;
+                                &lt;div class="timeline-body"&gt;
+                                    &lt;p class="text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;&lt;!-- /timeline item --&gt;
+                        &lt;li class="timeline-inverted"&gt;
+                            &lt;div class="timeline-image"&gt;
+                                &lt;h4&gt;Be Part
+                                    &lt;br&gt;Of Our
+                                    &lt;br&gt;Story!&lt;/h4&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;&lt;!-- /.timeline --&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;&lt;!-- /.col-lg-12 --&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/section&gt;</code></pre>
+
+                </div>
+
+
+
+               <div id="team">
+                    <h2 class="page-header">Team Section</h2>
+
+                    <p>Feature team profiles using this section. Each team profile includes an image, name, job title, and social media links.</p>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- Team Section --&gt;
+    &lt;section id="team" class="bg-light-gray"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-12 text-center"&gt;
+                    &lt;h2 class="section-heading"&gt;Our Team&lt;/h2&gt;
+                    &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;div class="team-member first hidden"&gt;
+                        &lt;img src="assets/img/team/1.jpg" class="img-responsive img-circle" alt=""&gt;
+                        &lt;h4&gt;John Doe&lt;/h4&gt;
+                        &lt;p class="text-muted"&gt;Lead Designer&lt;/p&gt;
+                        &lt;ul class="list-inline social-buttons"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.team-member --&gt;
+                &lt;/div&gt;&lt;!-- /.col-sm-4 --&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;div class="team-member second hidden"&gt;
+                        &lt;img src="assets/img/team/2.jpg" class="img-responsive img-circle" alt=""&gt;
+                        &lt;h4&gt;Jane Doe&lt;/h4&gt;
+                        &lt;p class="text-muted"&gt;Lead Marketer&lt;/p&gt;
+                        &lt;ul class="list-inline social-buttons"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.team-member --&gt;
+                &lt;/div&gt;&lt;!-- /.col-sm-4 --&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;div class="team-member third hidden"&gt;
+                        &lt;img src="assets/img/team/3.jpg" class="img-responsive img-circle" alt=""&gt;
+                        &lt;h4&gt;Joe Bloggs&lt;/h4&gt;
+                        &lt;p class="text-muted"&gt;Lead Developer&lt;/p&gt;
+                        &lt;ul class="list-inline social-buttons"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.team-member --&gt;
+                &lt;/div&gt;&lt;!-- /.col-sm-4 --&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-8 col-lg-offset-2 text-center"&gt;
+                    &lt;p class="large text-muted"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+    &lt;/section&gt;</code></pre>
+
+                </div>
+
+
+
+               <div id="news">
+                    <h2 class="page-header">Client Slider</h2>
+
+                    <p></p>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- Clients Aside --&gt;
+&lt;aside class="clients"&gt;
+    &lt;div class="container"&gt;
+        &lt;div id="clients-carousel" class="carousel slide" data-ride="carousel"&gt;
+        &lt;!-- Wrapper for slides --&gt;
+          &lt;div class="carousel-inner"&gt;
+            &lt;div class="item active"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/envato.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/designmodo.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/themeforest.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/creative-market.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.item --&gt;
+            &lt;div class="item"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/aetuts.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/microlancer.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/wordpress.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-md-3 col-sm-6"&gt;
+                        &lt;a href="#"&gt;
+                            &lt;img src="assets/img/logos/wrapbootstrap.jpg" class="img-responsive img-centered" alt=""&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;                    
+                &lt;/div&gt; 
+            &lt;/div&gt;&lt;!-- /.item --&gt;
+
+            &lt;/div&gt;&lt;!-- /.carousel-inner --&gt;
+
+            &lt;!-- Indicators --&gt;
+              &lt;ol class="carousel-indicators"&gt;
+                &lt;li data-target="#clients-carousel" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+                &lt;li data-target="#clients-carousel" data-slide-to="1"&gt;&lt;/li&gt;
+              &lt;/ol&gt;&lt;!-- /ol --&gt;
+
+        &lt;/div&gt;&lt;!-- /.carousel --&gt;
+    &lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/aside&gt;</code></pre>
+
+                </div>
+
+
+
+               <div id="news">
+                    <h2 class="page-header">News Section</h2>
+
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- News Section --&gt;    
+&lt;section id="blog" class="bg-light-gray"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-lg-12 text-center"&gt;
+                    &lt;h2 class="section-heading"&gt;Latest News&lt;/h2&gt;
+                    &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- /.row --&gt;
+            &lt;div class="row blog-row"&gt;
+                &lt;div class="col-md-4 col-lg-4 blog-col"&gt;
+                    &lt;a href="#newsModal1" data-toggle="modal" class="blog-preview-img"&gt;
+                        &lt;div class="caption"&gt;
+                            &lt;div class="caption-content"&gt;
+                                &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;img src="assets/img/blog1.jpg" class="img-responsive" alt=""&gt;
+                    &lt;/a&gt;
+                    &lt;div class="blog-preview-content"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Blog Post Title&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quisquam, sunt, corporis.&lt;/p&gt;
+                        &lt;div class="continue"&gt;&lt;a href="#"&gt;Read More →&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="meta list-inline"&gt;
+                            &lt;li&gt;April 10, 2014&lt;/li&gt;
+                            &lt;li&gt;3 Comments&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fa fa-comments-o"&gt;&lt;/i&gt; 12&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.blog-preview-content --&gt;
+                &lt;/div&gt;&lt;!-- /.blog-col --&gt;
+                &lt;div class="col-md-4 col-lg-4 blog-col"&gt;
+                    &lt;a href="#newsModal2" data-toggle="modal" class="blog-preview-img"&gt;
+                        &lt;div class="caption"&gt;
+                            &lt;div class="caption-content"&gt;
+                                &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;img src="assets/img/blog2.jpg" class="img-responsive" alt=""&gt;
+                    &lt;/a&gt;
+                    &lt;div class="blog-preview-content"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Blog Post Title&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quisquam, sunt, corporis.&lt;/p&gt;
+                        &lt;div class="continue"&gt;&lt;a href="#"&gt;Read More →&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="meta list-inline"&gt;
+                            &lt;li&gt;February 31, 2014&lt;/li&gt;
+                            &lt;li&gt;9 Comments&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fa fa-comments-o"&gt;&lt;/i&gt; 12&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.blog-preview-content --&gt;
+                &lt;/div&gt;&lt;!-- /.blog-col --&gt;
+                &lt;div class="col-md-4 col-lg-4 blog-col"&gt;
+                    &lt;a href="#newsModal3" data-toggle="modal" class="blog-preview-img"&gt;
+                        &lt;div class="caption"&gt;
+                            &lt;div class="caption-content"&gt;
+                                &lt;i class="fa fa-expand fa-3x"&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;img src="assets/img/blog3.jpg" class="img-responsive" alt=""&gt;
+                    &lt;/a&gt;
+                    &lt;div class="blog-preview-content"&gt;
+                        &lt;h3&gt;
+                            &lt;a href="#"&gt;Blog Post Title&lt;/a&gt;
+                        &lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quisquam, sunt, corporis.&lt;/p&gt;
+                        &lt;div class="continue"&gt;&lt;a href="#"&gt;Read More →&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;ul class="meta list-inline"&gt;
+                            &lt;li&gt;January 6, 2014&lt;/li&gt;
+                            &lt;li&gt;1 Comment&lt;/li&gt;
+                            &lt;li&gt;&lt;i class="fa fa-comments-o"&gt;&lt;/i&gt; 12&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;&lt;!-- /.blog-preview-content --&gt;
+                &lt;/div&gt;&lt;!-- /.blog-col --&gt;
+            &lt;/div&gt;&lt;!-- /.blog-row --&gt;
+        &lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/section&gt;</code></pre>
+
+                </div>
+
+                <div id="contact">
+                    <h2 class="page-header">Contact Section</h2>
+
+                    <p>The Contact section includes a PHP-based Contact form with built-in validation.</p>
+
+                    <div class="bs-callout bs-callout-danger" id="callout-carousel-transitions">
+                        <h4>PHP scripts do not run without a server environment</h4>
+                        <p>PHP does not run in your browser - it must run from a <a href="http://php.net/manual/en/tutorial.requirements.php">server environment</a>. Loading the index.html page from your computer will work, but PHP won't process. You must upload the theme files to a server, most typically via FTP. Alternatively, you can setup a local server environment using <a href="http://www.wampserver.com/en/">WAMP</a> (for Windows users) or <a href="http://www.mamp.info/en/">MAMP</a> (for Mac users). For more information about PHP, see the <a href="http://php.net/docs.php">official PHP documentation</a>.</p>
+                    </div>
+
+                    <h4>PHP:</h4>
+                    <p>The following PHP script handles the posting of data and creation/sending of an email to a specified email address in the <code class="inline">$to</code>variable.</p>
+<pre><code class="language-markup">&lt;?php
+// Check for empty fields
+if(empty($_POST['name'])        ||
+   empty($_POST['email'])       ||
+   empty($_POST['phone'])       ||
+   empty($_POST['message']) ||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+   {
+    echo "No arguments Provided!";
+    return false;
+   }
+    
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+    
+// Create the email and send the message
+$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "Website Contact Form:  $name";
+$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers .= "Reply-To: $email_address"; 
+mail($to,$email_subject,$email_body,$headers);
+return true;            
+?&gt;</code></pre>
+    
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- Contact section --&gt;
+&lt;section id="contact"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-12 text-center"&gt;
+                &lt;h2 class="section-heading"&gt;Contact Us&lt;/h2&gt;
+                &lt;h3 class="section-subheading text-muted"&gt;Lorem ipsum dolor sit amet consectetur.&lt;/h3&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-12"&gt;
+                &lt;form name="sentMessage" id="contactForm" novalidate&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-md-6"&gt;
+                            &lt;div class="form-group"&gt;
+                                &lt;input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name."&gt;
+                                &lt;p class="help-block text-danger"&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="form-group"&gt;
+                                &lt;input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address."&gt;
+                                &lt;p class="help-block text-danger"&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="form-group"&gt;
+                                &lt;input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number."&gt;
+                                &lt;p class="help-block text-danger"&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-md-6"&gt;
+                            &lt;div class="form-group"&gt;
+                                &lt;textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."&gt;&lt;/textarea&gt;
+                                &lt;p class="help-block text-danger"&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="clearfix"&gt;&lt;/div&gt;
+                        &lt;div class="col-lg-12 text-center"&gt;
+                            &lt;div id="success"&gt;&lt;/div&gt;
+                            &lt;button type="submit" class="btn btn-xl"&gt;&lt;i class="fa fa-paper-plane"&gt;&lt;/i&gt; Send Message&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- /.row --&gt;
+                &lt;/form&gt;&lt;!-- /form --&gt;
+            &lt;/div&gt;&lt;!-- /.col-lg-12 --&gt;
+        &lt;/div&gt;&lt;!-- /.row --&gt;
+    &lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/section&gt;</code></pre>
+
+                </div>
+
+                <div id="googlemap">
+                    <h2 class="page-header">Google Map</h2>
+
+                    <p></p>
+                    <h4>HTML:</h4>
+                    <p>The necessary Google Map JavaScript plugin is included in the footer.</p>
+<pre><code class="language-markup">&lt;!-- Google Maps --&gt;
+&lt;script src="http://maps.google.com/maps/api/js?sensor=true"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Within the page, an empty <code class="inline">div</code> is used as a placeholder for the map. The JavaScript in the next section initalises the plugin and draws the map.</p>
+<pre><code class="language-markup">&lt;!-- Google Map --&gt;
+&lt;section id="map"&gt;
+    &lt;div id="gmap"&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+<h4>JavaScript:</h4>
+<pre><code class="language-markup">/*============================================
+Contact Map
+==============================================*/
+function loadGoogleMap() {
+
+    var mapPoint = {
+                'lat': 53.3776901,
+                'lng': -2.8649802,
+                'zoom' : 10,
+                'infoText':'<p>94 Redcliffe Way\
+                            <br/>Woolton\
+                            <br/>L25 4NT</p>',
+                'linkText':'View on Google Maps',
+                'mapAddress':'94 Redcliffe Way, Woolton, L25 4TN',
+                'icon': 'assets/img/map_pin.png'
+            };
+
+    if($('#gmap').length){
+    
+        var map;
+        var mapstyles = [ { "stylers": [ { "saturation": -100 } ] } ];
+        
+        var infoWindow = new google.maps.InfoWindow;
+        
+        var pointLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
+
+        var mapOptions = {
+            zoom: mapPoint.zoom,
+            center: pointLatLng,
+            zoomControl : true,
+            panControl : false,
+            streetViewControl : false,
+            mapTypeControl: false,
+            overviewMapControl: false,
+            scrollwheel: false,
+            styles: mapstyles
+        }
+        
+        map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+        
+        var marker = new google.maps.Marker({
+            position: pointLatLng, 
+            map: map, 
+            title:mapPoint.linkText,
+            icon: mapPoint.icon
+        });
+        
+        var mapLink = 'https://www.google.com/maps/preview?ll='+mapPoint.lat+','+mapPoint.lng+'&amp;z=14&amp;q='+mapPoint.mapAddress;
+        
+        var html = '&lt;div class="infowin"&gt;'
+                + mapPoint.infoText
+                + '&lt;a href="'+mapLink+'" target="_blank">'+mapPoint.linkText+'&lt;/a&gt;'
+                + '&lt;/div&gt;';
+
+        google.maps.event.addListener(marker, 'mouseover', function() {
+            infoWindow.setContent(html);
+            infoWindow.open(map, marker);
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            window.open(mapLink,'_blank');
+        });
+        
+    }
+}
+</code></pre>
+
+<h4>More Information</h4>
+<p>The <a href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps API</a> allows you to hook into the power of Google Maps and create dynamic and flexible maps on your page. There are many different features, all of which can be used via JavaScript.</p>
+                </div>
+
+                <div id="footers">
+
+                    <h2 class="page-header">Footer</h2>
+
+                    <h4>CSS:</h4>
+<pre><code class="language-markup">
+// Footer
+
+footer {
+    padding: 50px 0 20px;
+    color: rgba(255,255,255,.7);
+    background-color: @gray-darkest;
+
+    a {
+        color: rgba(255,255,255,.7);
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .contact-details {
+        margin: 75px 0;
+        .fa {
+            font-size: 64px;
+        }
+    }
+
+    .social {
+        margin-bottom: 75px;
+    }
+
+    .copyright .small {
+        font-size: 14px;
+    }
+
+
+}</code></pre>
+                    <h4>HTML:</h4>
+<pre><code class="language-markup">&lt;!-- Footer --&gt;
+&lt;footer class="footer"&gt;
+    &lt;div class="container text-center"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-4 contact-details"&gt;
+                &lt;i class="fa fa-phone"&gt;&lt;/i&gt;
+                &lt;p&gt;070 7597 3611&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-4 contact-details"&gt;
+                &lt;i class="fa fa-map-marker"&gt;&lt;/i&gt;
+                &lt;p&gt;94 Redcliffe Way&lt;br&gt;Woolton, L25 4NT&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="col-md-4 contact-details"&gt;
+                &lt;i class="fa fa-envelope"&gt;&lt;/i&gt;
+                &lt;p&gt;&lt;a href="mailto:hi@jcthemes.com"&gt;hi@jcthemes.com&lt;/a&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.row --&gt;
+        &lt;div class="row social"&gt;
+            &lt;div class="col-lg-12"&gt;
+                &lt;ul class="list-inline"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook fa-fw fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter fa-fw fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-linkedin fa-fw fa-2x"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;&lt;!-- /.list-inline --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.social --&gt;
+        &lt;div class="row copyright"&gt;
+            &lt;div class="col-lg-12"&gt;
+                &lt;p class="small"&gt;&lt;a href="http://www.jcthemes.com/"&gt;Crafted by jc themes in England&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.copyright --&gt;
+    &lt;/div&gt;&lt;!-- /.container --&gt;
+&lt;/footer&gt;&lt;!-- /footer --&gt;</code></pre>
+
+                </div>
+
+                <div id="faq">
+                    <h2 class="page-header">FAQ</h2>
+                    <p>Did we miss something? Please check our <a href="http://www.jcthemes.com/faq">FAQ page</a> for more answers.</p>
+                </div>
+
+                <div id="credits">
+                    <h2 class="page-header">Credits</h2>
+                    <p>The photography used in this template is for demo purposes only. If you want to use any of the images seen in this demo, be sure to check their usage guidelines before you use them for commercial or personal purposes.</p>
+                    <p>Photo/Image Credits:</p>
+                    <ul>
+<li><a href="http://www.imcreator.com/free/business/bootcamp-business-model-canvas-the-game-june-5-7-2013-in-amsterdam-5  - https://www.flickr.com/photos/ter-burg/8969237967/sizes/l/">Bootcamp Business Model Canvas the Game, June 5-7 2013 in Amsterdam by Sebastiaan ter Burg</a></li>
+<li><a href="http://www.imcreator.com/free/business/bay-bridge-102224">Bay Bridge (#102224) by mark sebastian</a></li>
+<li><a href="https://www.behance.net/MathavanJaya">Portfolio of Mathavan Jaya</a></li>
+<li><a href="http://picjumbo.com/cafe-workspace-with-diary/">Cafe Workspace with Diary BY INSPIRATIONFEED.COM</a></li>
+<li><a href="http://www.imcreator.com/free/2013-mercedes-benz-a-class-speed-2">2013 Mercedes Benz A-Class speed via IM Creator</a></li>
+<li><a href="http://www.imcreator.com/free/fashion-beauty/beauty/the-model-2
+">Fashion Beauty Model via IM Creator</a></li>
+<li><a href="http://www.imcreator.com/free/sports-fitness/snowboarding
+">Snowboarding via IM Creator</a></li>
+<li><a href="https://unsplash.imgix.net/reserve/P6A1ZZ8nRPYKZHXbLikA_2014-07-11%2017.39.15-1.jpg?q=75&fm=jpg&auto=format&s=a017c40a7c2aedbe4943ac7471bed0cd
+">Misc Images from Unsplash</a></li>
+<li><a href="https://unsplash.imgix.net/36/IAG5tj7gThy5rOupZ5FK_IMG_3906.jpg?q=75&fm=jpg&auto=format&s=6d5bccce554e10518b28a9132219a3e1">Misc Images from Unsplash</a></li>
+                            <li>Team section</li>
+                                <ul>
+                                <li>Faces from <a href="http://uifaces.com">UI Faces</a></li>
+                                </ul>
+                            </li>
+                        <li>Service Icons</li>
+                            <ul>
+                                <li><a href="http://www.fontawesome.io/">FontAwesome</a></li>
+                            </ul>
+                        <li>Client Logos</li>
+                            <ul>
+                                <li>Various logos, including WrapBootstrap, Envato, Creative Market, ThemeForest, DesignModo, WordPress. All trademarks are property of their respective owners.</li>
+                            </ul>
+                    </ul>
+                    <p>JavaScript plugins and third party CSS used in this theme:</p>
+                    <ul>
+                        <li><a href="http://getbootstrap.com/">Twitter Bootstrap framework</a></li>
+                        <li><a href="http://retinajs.com">Retina JS</a></li>
+                        <li><a href="https://daneden.github.io/animate.css/">Animate.css by Dan Eden</a></li>
+                        <li><a href="http://www.google.com/fonts#">Google Fonts</a></li>
+                        <li><a href="https://developers.google.com/maps/">Google Maps API</a></li>
+                        <li><a href="http://owlgraphic.com/owlcarousel/">Owl Carousel</a></li>
+                        <li><a href="https://code.google.com/p/html5shiv/">HTML5Shiv</a></li>
+                        <li><a href="https://github.com/scottjehl/Respond">Respond JS</a></li>
+                        <li><a href="http://jquery.com/">jQuery 1.11.0</a></li>
+                        <li><a href="http://www.gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing</a></li>
+                        <li><a href="http://isotope.metafizzy.co/index.html">Isotope</a></li>
+                        <li><a href="http://github.hubspot.com/pace/docs/welcome/">Pace JS</a></li>
+                        <li><a href="https://reactiveraven.github.io/jqBootstrapValidation/">Bootstrap Validation</a></li>
+                        <li><a href="https://github.com/dirkgroenen/jQuery-viewport-checker">jQuery Viewport Checker</a></li>
+                        <li><a href="http://tympanus.net/codrops/2013/06/06/on-scroll-animated-header/">OnScroll Animated Header</a></li>
+                        <li><a href="https://github.com/desandro/classie">Classie</a></li>
+                        <li><a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome</a></li>
+                    </ul>
+                </div>
+
+                <div id="browsersupport">
+                    <h2 class="page-header">Browser support</h2>
+                    <p>All our products are designed to work with Internet Explorer versions 9+, Safari (Mac+iOS), Firefox (Mac+Windows), Chrome (Mac/Windows/Android/iOS).</p>
+                    <p>Specific CSS3 features may not render perfectly in Internet Explorer 9 because of its lack of full CSS3 support.</p>
+                    <p>We <strong>do not</strong> support Internet Explorer 6, 7 or 8.</p>
+                </div>
+    
+                <div class="misc">
+                    <h2 class="page-header">Misc</h2>
+
+                     <footer>
+                     <h4>Free support disclaimer</h4>
+                        <p id="freesupport"><small>*Free support is available to customers of jcthemes ltd in any country. Free support includes email-only assistance with bugs, problems or quirks with our products. Please allow up to 5 working days for a reply to your support enquiry. For extended help with theme/plugin implementation, or theme modification/customisation, please refer to our <a href="http://www.jcthemes.com/consultancy">consultancy service</a>. We cannot provide free support for help with modifications/customisations of our products, sorry.</small></p>
+
+                        <p>&copy;2014 <a href="http://www.jcthemes.com/">jcthemes</a></p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/docs.min.js"></script>
+
+</body>
+
+</html>
