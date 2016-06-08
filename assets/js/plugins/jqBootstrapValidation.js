@@ -8,7 +8,7 @@
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
 
-/*(function( $ ){
+(function( $ ){
 
 	var createdElements = [];
 
@@ -16,7 +16,7 @@
 		options: {
 			prependExistingHelpBlock: false,
 			sniffHtml: true, // sniff for 'required', 'maxlength', etc
-			preventSubmit: true, // stop the form submit event from firing if validation fails
+			preventSubmit: false, // stop the form submit event from firing if validation fails
 			submitError: false, // function called if there is an error when trying to submit
 			submitSuccess: false, // function called just before a successful submit event is sent to the server
             semanticallyStrict: false, // set to true to tidy up generated HTML output
@@ -43,7 +43,7 @@
           }).toArray()
         );
 
-        $(uniqueForms).bind("submit", function (e) {
+        /*$(uniqueForms).bind("submit", function (e) {
           var $form = $(this);
           var warningsFound = 0;
           var $inputs = $form.find("input,textarea,select").not("[type=submit],[type=image]").filter(settings.options.filter);
@@ -76,7 +76,7 @@
               settings.options.submitSuccess($form, e);
             }
           }
-        });
+        });*/
 
         return this.each(function(){
 
@@ -881,7 +881,7 @@
    *
    * http://stackoverflow.com/questions/359788/how-to-execute-a-javascript-function-when-i-have-its-name-as-a-string#answer-359910
    * Short link: http://tinyurl.com/executeFunctionByName
-  **
+  **/
   function executeFunctionByName(functionName, context) {
     var args = Array.prototype.slice.call(arguments).splice(2);
     var namespaces = functionName.split(".");
